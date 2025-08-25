@@ -1,0 +1,882 @@
+/* #region GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: #E9E9E9;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+#Projects {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+.ProjectsGroup {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.Layout {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(calc(100% - 32rem), 100%)
+    1fr;
+}
+.Layout > * {
+  grid-column: 2;
+}
+
+.FullBleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
+.SectionPadding {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+.SectionPaddingLeftOnly {
+    padding-left: 8rem;
+    padding-right: 0;
+}
+.SmallPadding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.SmallPaddingRight {
+    padding-right: 2rem;
+}
+.ClearPadding {
+    padding: 0;
+}
+
+img {
+    display: block;
+    image-orientation: none; /* fix for rotated images on Safari */
+}
+.ProjectMainSection img {
+    border: 1px solid rgb(201, 201, 201);
+}
+b {
+    font-weight: 600;
+}
+.PrimaryButton {
+    border: none;
+    background-color: #2156a6;
+    color: #fff;
+    padding: 1rem 1.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    text-align: center;
+    text-wrap: balance;
+    width: fit-content;
+}
+.PrimaryButton:hover {
+    background-color: #00005e;
+    transition: .1s ease-in-out;
+}
+.PrimaryButton:not(:hover) {
+    background-color: #2156a6;
+    transition: .1s ease-in-out;
+}
+#skip {
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 2px;
+    position: absolute;
+    left: -999px;
+    color: #000;
+    z-index: 999;
+}
+#skip:focus {
+    left: 10px;
+    top: 30px;
+}
+
+.AlignedCards {
+    display: flex;
+    gap: 1rem;
+}
+.ParentColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.LargeGapColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.BigHeadingAndParagraph {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.NoBorder img {
+    border: none;
+}
+.SmallGap {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+.ProjectBody h2 {
+    margin-bottom: -1.5rem;
+}
+.Row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2rem;
+}
+.Column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem !important;
+}
+.GapUnset {
+    gap: unset !important;
+}
+
+/* .Column h1, .Column h2, .Column h3, .Column h4 {
+    margin-bottom: -.5rem;
+} */
+.ParentColumnGap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.JustImagesContainer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.OneColumnImagesContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+}
+
+@media only screen and (max-width: 1300px) {
+    .SectionPadding, .SectionPaddingLeftOnly {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .SectionPadding, .SectionPaddingLeftOnly {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+.JustImagesContainer {
+    display: flex;
+    flex-direction: column;
+}
+}
+
+
+/* #endregion GLOBAL */
+
+/* #region NAVBAR */
+
+@media only screen and (max-width: 850px) {
+    .NavBar {
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+    .NavBarLinks {
+        gap: 3rem !important;
+    }
+    .NavBarLogo {
+        /* display: flex;
+        width: 100%;
+        justify-content: center; */
+    }
+    .ProjectHeroDescription {
+        max-width: unset !important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .NavBarLinksChild {
+        font-size: 1rem;
+    }
+    .NavBarLinks {
+        gap: 2rem !important;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .NavBarLinks {
+        gap: 1.5rem !important;
+    }
+}
+@media only screen and (max-width: 324px) {
+    .NavBarLinks {
+        gap: 1.4rem !important;
+    }
+}
+
+.NavBarLogo {
+        /* margin-left: 10vw; */
+        /* color: red; */
+        /* padding-right: 2vw; */
+        /* padding-top: 1em; */
+        /* padding-bottom: 0; */
+        /* height: ; */
+        padding: 0rem;
+        /* border-radius: 20; */
+        background-color: #2156a6;
+}
+.NavBarLogo img {
+        background-color: #2156a6;
+        /* padding-left: 2em; */
+        /* color: red; */
+        /* padding-right: 2em; */
+        /* padding-top: 2em; */
+        padding: 1rem;
+        height: 5rem;
+        width: 5rem;
+}
+.NavBarLogo a {
+font-size: 0;
+width: max-content;
+display: block;
+}
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* margin-bottom: 2rem; */
+}
+.NavLinkHome {
+    display: none !important;
+}
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background: rgba( 233, 233, 233, 0.75);
+    box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur( 26.5px );
+    -webkit-backdrop-filter: blur( 26.5px);
+}
+.NavBarLinks {
+    /* position: absolute;
+    right: 20%; */
+    font-weight: 700;
+    font-size: 1.125rem;
+    display: flex;
+    gap: 6rem;
+}
+.NavBarLinks a:link, .NavBarLinks a:visited, .NavBarLinks a:hover, .NavBarLinks a:active {
+    text-decoration: none;
+}
+.NavBarLinks a:link, .NavBarLinks a:visited {
+    color: #2156a6;
+}
+.NavBarLinks a:hover, .NavBarLinks a:active {
+    color: #00005e;
+    text-decoration: underline;
+}
+.NavBarLinksChild {
+    /* display: inline;
+    padding-left: 100px; */
+
+}
+.CurrentPage {
+    /* display: flex;
+    flex-direction: column; */
+}
+.CurrentPage a {
+    color: #00005e !important;
+    text-decoration: underline !important;
+}
+/* .CurrentPage::after{
+    content:'';
+    height: 2px;
+    background-color: #2156a6;
+    display: inline-block;
+    top: 10%;
+    left: 4%;
+    border-radius: 20px;
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+} */
+/* #endregion NAVBAR */
+
+/* #region FOOTER */
+
+@media only screen and (max-width: 850px) {
+    .FooterDiv {
+        flex-direction: column;
+        align-items: center !important;
+        gap: 1rem;
+    }
+    .FooterMessage {
+        margin-right: 0 !important;
+    }
+    .FooterLinks {
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+}
+
+footer {
+    background: #ffffff;
+    margin-top: 3.5rem;
+    padding: 2rem 0;
+    background: #e9e9e9;
+    box-shadow: 0px 2px 8px #00000057;
+    background-color: 25%;
+    background: rgba( 233, 233, 233, 0.75);
+    box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur( 26.5px );
+    -webkit-backdrop-filter: blur( 26.5px);
+
+}
+footer a:hover, footer a:active {
+    color: #00005e;
+}
+.FooterDiv {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: .9rem;
+}
+.FooterDivParent {
+    display: flex;
+    justify-content: space-between;
+}
+.FooterMessage {
+    margin-right: auto;
+    font-weight: 500;
+    
+}
+.FooterMessage span {
+    width: 300px !important;
+}
+.FooterLinks {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.LogoFooter {
+    max-width: 16px;
+}
+.LinkedinLogo {
+    width: 40px;
+}
+.Email {
+    color: #2156a6;
+}
+/* #endregion FOOTER */
+
+/* #region TYPOGRAPHY */
+h1 {
+    font-size: 3.7rem;
+    font-weight: 700;
+    /* width:fit-content; */
+    /* border-bottom: 4px solid #2156a6;
+    padding-bottom: 4px; */
+    /* margin-right: 10%; */
+    margin-top: 0;
+    line-height: 130%;
+    widows: 1;
+    /* padding-right: 0 !important; */
+    color: #2156a6;
+    text-align: left !important;
+    text-wrap: balance;
+}
+.HeroHomeIntro h1 {
+    line-height: 120%;
+}
+.LightH1 {
+    letter-spacing: 2%;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2156a6;
+    line-height: 135%;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 135%;
+}
+h4, .Heading4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+p, .ParagraphGap ul, li {
+    line-height: 140%;
+    font-size: 1.1rem;
+}
+.LightH1 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.HeavyH1 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+:is(.ParentColumn) > h3 + p, :is(.ParentColumn) > h4 + p, :is(.ParentColumn) > h3 + img, :is(.ParentColumn) > h4 + img {
+    margin-top: -1rem; /* this takes the value of the gap property of the class .ParentColumn and subtracts the value applied in this margin-top property. This property needs to be negative, and the result the equation [.ParentColumn {gap: x}] + [:is(.ParentColumn) > h3 + p, :is(.ParentColumn) > h4 + p] should ALWAYS equal the value of margin-top within the selector h3 + p, h4 + p. */
+}
+h3 + p, h4 + p {
+    /* margin-top: 1rem; */
+}
+h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
+    margin-top: .25rem;
+}
+.ProjectBodySectionHeadings .StickyElement:has(h2 + p){
+    /* margin-bottom: 0 !important; */
+    gap: .75rem;
+    /* If a container for the text sections on the left column of a case study has only an h2 and a p tag (as opposed to an h2 and then a div with an h3 and p tag), then the spacing between the h2 and p tag will be .75rem. If there is a div with an h3 and p tag, then the spacing between the h2 and the div will be 1.25 rem (.75 gap + .5 margin-bottom) because the spacing between an h2 and p tag should be less than the spacing between an h2 and h3 tag. */
+}
+.ProjectBodySectionContent h3 {
+    /* margin-top: .5rem; */
+}
+.ProjectTag {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 1.125rem;
+}
+.Link, .Link:visited {
+    color: #2156a6;
+    font-weight: 600;
+}
+.SmallH2 {
+    font-size: 1.5rem;
+
+}
+/* .Heading4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+} */
+.ProjectCardInfo h3 {
+    font-size: 1.9rem;
+}
+.BodyLarge {
+    font-size: 1.25rem;
+    line-height: 140%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .LightH1 {
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    .HeavyH1 {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .HeroHomeIntro {
+        display: flex;
+        justify-content: center;
+    }
+    .HeroHomeIntro h1 {
+        text-align: center !important;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .HeroHomeIntro h1 {
+        padding-right: 0 !important;
+        margin-right: 0 !important
+    }
+    .HeroHomeIntro .SectionPadding {
+        padding: .5rem !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+    h2 {
+        font-size: 1.9rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+}
+
+/* #endregion TYPOGRAPHY */
+
+
+/* #region HOME PAGE */
+.HeroAnimation {
+    max-width: 100%;
+}
+.HeroMainSubHeading {
+    /* text-transform: uppercase; */
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #000;
+    line-height: 150% !important;
+}
+.VisualDesign {
+    font-weight: 700;
+    color: #4921A6;
+}
+.UserResearch {
+    font-weight: 700;
+    color: #9621A6;
+}
+.FrontEndDev {
+    font-weight: 700;
+    color: #A62137;
+}
+.HeroHome {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.HeroHomeHeading {
+    display: flex;
+    flex-direction: column;
+    /* gap: -4rem; */
+}
+.HeroHalfWidth {
+    max-width: 45rem;
+}
+/* #endregion HOME PAGE */
+
+/* #region PROJECT CARDS */
+
+@media only screen and (max-width: 1000px) {
+    .ProjectsSectionHeader {
+        flex-direction: column;
+        align-items: center;
+        gap: .75rem;
+        text-align: center;
+        text-wrap: balance;
+    }
+    .ProjectTag {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .ProjectCard {
+        flex-direction: column-reverse !important;
+        padding: 1.2rem !important;
+        gap: 2rem;
+        overflow: unset !important;
+        max-height: unset !important;
+    }
+    .ProjectCardImage{
+        overflow: unset !important;
+    }
+    .ProjectCardText, .ProjectCardInfo {
+        align-items: center;
+        text-align: center;
+    }
+    .ProjectCardText {
+        max-width: 80%;
+        padding-right: unset;
+    }
+    .ProjectTag {
+        font-size: 1.125rem;
+    }
+    
+}
+@media only screen and (max-width: 500px) {
+    .ProjectCardText {
+        max-width: 100%;
+    }
+    .TagsContainer {
+        flex-direction: column;
+        gap: .25rem !important;
+    }
+}
+
+.ProjectsSection {
+    /* padding-top: 1.5rem; */
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr 1fr; */
+}
+.ProjectCard {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    /* align-items: center; */
+    /* flex-direction: column; */
+    /* gap: 1rem; */
+    /* box-shadow: 8px 8px 16px -2px rgba(82, 82, 82, 0.25) inset, -8px -8px 16px -2px rgba(82, 82, 82, 0.25) inset; */
+    background-color: #fff;
+    border-radius: .5rem;
+    text-decoration: none;
+    color: initial;
+    /* max-height: 500px; */
+    height: 500px;
+    overflow: hidden;
+    /* border: #2156a6 0px solid inset; */
+    outline: #2156a6 0px solid;
+    
+    /* -webkit-box-shadow: 8px 4px 16px -9px rgba(0,0,0,0.25);
+-moz-box-shadow: 8px 4px 16px -9px rgba(0,0,0,0.25);
+box-shadow: 8px 4px 16px -9px rgba(0,0,0,0.25); */
+
+-webkit-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
+box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
+transition: .3s ease-in-out;
+
+}
+
+/* .ProjectCard .PrimaryButton {
+    position: relative;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 9999;
+} */
+.ProjectCard:hover {
+    /* background-color: #00005e; */
+    /* transition: .3s ease-in-out;
+    color: #fff; */
+    background-attachment: fixed;
+    background-image:radial-gradient(circle at var(--x, 0) var(--y, 0), rgba(0,14,84,0.18109250536151966) 0%, rgba(0,14,84,0) 100%);
+    -webkit-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.9);
+-moz-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.9);
+box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.9);
+transition: .01s ease-in-out;
+/* border: #2156a6 1px solid inset; */
+outline: #2156a6 1px solid;
+
+
+
+    
+}
+/* .ProjectCard::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background-attachment: fixed;
+    background-image: radial-gradient(
+      circle at var(--x, 0) var(--y, 0),
+      rgba(0,14,84,0.18109250536151966) 0%
+      transparent 5rem
+    );
+    pointer-events: none;
+    z-index: -1;
+  } */
+.ProjectCard:not(:hover) {
+    transition: .3s ease-in-out;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
+box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
+}
+/* .ProjectCard:hover .FeaturedTag {
+    color: white;
+    transition: .3s ease-in-out;
+} */
+.ProjectCard:not(:hover) .FeaturedTag {
+    transition: .3s ease-in-out;
+    color: #2156a6;
+}
+.ProjectCardText {
+    /* flex: 40%; */
+    /* padding-right: 1rem; */
+    /* width: 30rem; */
+    /* position:absolute; */
+    /* right: 4rem; */
+    display: flex;
+    flex-direction: column;
+    /* gap: .75rem; */
+    text-wrap: balance;
+    padding: 2rem;
+    justify-content: space-between;
+    height: 100%;
+
+}
+.TagsContainer {
+    display: flex;
+    gap: 1rem;
+}
+.FeaturedTag {
+    color: #2156a6;
+}
+.ProjectCardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+.ProjectCardImage {
+    /* overflow: hidden; */
+    /* padding: 2rem; */
+    position: absolute;
+    right: -11rem;
+    bottom: -14rem;
+}
+#OptimalAssessment .ProjectCardImage {
+    padding-bottom: 0;
+}
+.ProjectCardImage img {
+    /* max-width: 100%; */
+    width: 60rem;
+}
+/* #endregion PROJECT CARDS */
+
+
+
+/* #region CASE STUDY */
+
+.CaseStudyHero {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    overflow: hidden;
+}
+.CaseStudyHeroText h1 {
+    width: 100%;
+    margin-right: 0;
+    text-align: left; /* keeps your alignment */
+}
+.CaseStudyHeroText {
+    /* flex: 1; */
+    min-width: 0; /* prevents flex item from overflowing */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-wrap: balance;
+    
+}
+
+.CaseStudyHeroImage {
+    /* flex: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -10rem;
+    position: relative; /* enables the overflow effect */
+}
+.CaseStudyHeroImage img {
+    width: 55rem; /* slightly wider than container */
+    height: auto;
+    object-fit: cover;
+}
+
+.CaseStudyMainContent {
+    display: grid;
+    gap: 3.5rem;
+}
+.CaseStudyPart {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+/* .CaseStudySection {
+    display: flex;
+    flex-direction: column;
+    gap: unset;
+} */
+
+/* .CaseStudySection div {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+} */
+.ContentBlock {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.SectionMiniContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.SectionText {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.ContentCard {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    padding: 1rem;
+    background-color: #f4f4f4;
+    width: 100%;
+}
+/* .ContentCard img {
+    width: 25rem;
+    height: fit-content;
+} */
+.CardRow {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.CardColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.TwoMediaCard {
+    display: flex;
+    flex-direction: row;
+    gap: .25rem;
+    width: 100%;
+    justify-content: space-between;
+}
+.TwoMediaCard img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+.TwoMediaCard *, .ContentCard * {
+    width: 100%;
+    height: 100%;
+}
+#final-designs {
+    scroll-margin-top: 16vh;
+}
+
+
+
+/* #endregion CASE STUDY */
