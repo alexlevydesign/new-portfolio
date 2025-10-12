@@ -55,7 +55,7 @@ main {
 }
 .SectionPaddingLeftOnly {
     padding-left: 8rem;
-    padding-right: 8rem;
+    padding-right: 0;
 }
 .SmallPadding {
     padding-left: 4rem;
@@ -403,7 +403,7 @@ footer a:hover, footer a:active {
 
 /* #region TYPOGRAPHY */
 h1 {
-    font-size: 3rem;
+    font-size: 3.7rem;
     font-weight: 700;
     /* width:fit-content; */
     /* border-bottom: 4px solid #2156a6;
@@ -771,10 +771,6 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     justify-content: space-between;
     gap: 4rem;
     overflow: hidden;
-    background: rgba( 233, 233, 233, 0.75);
-    box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur( 26.5px );
-    -webkit-backdrop-filter: blur( 26.5px);
 }
 .CaseStudyHeroText h1 {
     width: 100%;
@@ -788,8 +784,6 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     flex-direction: column;
     gap: 1.5rem;
     text-wrap: balance;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     
 }
 
@@ -798,16 +792,13 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-right: -10rem; */
+    margin-right: -10rem;
     position: relative; /* enables the overflow effect */
-    height: 100%;
 }
 .CaseStudyHeroImage img {
-    max-width: 42rem; /* slightly wider than container */
+    width: 55rem; /* slightly wider than container */
     height: auto;
     object-fit: cover;
-    height: 100%;
-    /* width: 100%; */
 }
 
 .CaseStudyMainContent {
@@ -885,52 +876,6 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 }
 #final-designs {
     scroll-margin-top: 16vh;
-}
-.ContentCard h4 {
-    height: unset;
-}
-
-@media only screen and (max-width: 1200px) {
-    .CaseStudyHero {
-        flex-direction: column-reverse;
-        align-items: center !important;
-        gap: 0;
-    }
-    .CaseStudyHeroText {
-        align-items: center;
-        padding-bottom: 0;
-    }
-    .CaseStudyHeroText .PrimaryButton {
-        align-self: self-start;
-    }
-    .CaseStudyHeroText, .CaseStudyHeroText h1 {
-        text-wrap: initial;
-        max-width: 42rem;
-    }
-    .CaseStudyHeroImage {
-        max-width: 100%;
-        padding-top: 2rem;
-    }
-    .CaseStudyHeroImage img {
-        /* padding-right: 4rem;
-        padding-left: 4rem; */
-        width: 100%;
-    }
-    .CaseStudyMainContent {
-        display: flex;
-        flex-direction: column;
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-    .CardRow {
-        flex-direction: column;
-    }
-    .Row {
-        flex-direction: column !important;
-    }
-    .ContentCard {
-        width: unset;
-    }
 }
 
 
