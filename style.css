@@ -596,7 +596,7 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
         font-size: 1rem;
     }
     .ProjectCard {
-        flex-direction: column !important;
+        flex-direction: column-reverse !important;
         align-items: flex-start !important;
         text-align: left !important;
         height: auto !important;
@@ -628,13 +628,13 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
 }
 
 @media only screen and (max-width: 900px) {
-    .ProjectCard {
+    /* .ProjectCard {
         flex-direction: column-reverse !important;
         padding: 1.2rem !important;
         gap: 2rem;
         overflow: unset !important;
         max-height: unset !important;
-    }
+    } */
     .ProjectCardImage{
         overflow: unset !important;
     }
