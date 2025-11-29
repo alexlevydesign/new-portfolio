@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Levy's Portfolio — UI & UX</title>
+    <title>Alex Levy's Portfolio — UI and UX</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +21,9 @@
                 <div class="NavBarLinksChild NavLinkHome NavLinkMargin"><a href="index.html">Home</a></div>
                 <!-- <div class="NavBarLinksChild NavLinkProjects NavLinkMargin"><a href="index.html#Projects">Projects</a></div> -->
                 <!-- <div class="NavBarLinksChild NavLinkContact NavLinkMargin"><a href="index.html#Contact">Contact</a></div> -->
-                <div class="NavBarLinksChild NavLinkAbout"><a href="index.html">UI & UX</a></div>
-                <div class="NavBarLinksChild NavLinkAbout"><a href="graphic-design.html">Graphic Design</a></div>
-                <div class="NavBarLinksChild NavLinkAbout"><a href="about.html">About</a></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="index.html">UI & UX</a><div></div></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="graphic-design.html">Graphic Design</a><div></div></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="about.html">About</a><div></div></div>
             </div>
         </div>
     </nav>
@@ -42,25 +42,79 @@
         </header>
         <section class="SectionPadding" id="Projects" >
             <h2>Projects</h2>
-            <div class="ProjectsGroup">
+            <div class="ProjectsSection">
                 
             </div>
+
             <a href="government-data-finder.html" class="ProjectCard">
                 <div class="ProjectCardText">
                     <div>
-                        <div class="TagsContainer">
+                        <!-- <div class="TagsContainer">
                             <p class="ProjectTag">UX Design</p>
                             <p class="ProjectTag">User Research</p>
                             <p class="ProjectTag">Visual Design</p>
-                        </div>
-                        <h3>Designing a tool to help students and professionals find government data while maintaining good data practices.</h3>
+                        </div> -->
+                        <h3>Designing a tool to help students and professionals find government data while maintaining good data practices</h3>
                     </div>
-                    <button href="government-data-finder.html" class="PrimaryButton">View project</button>
+                    <button href="government-data-finder.html" class="PrimaryButton">View project <img src="assets/icons/arrow-right.svg" alt=""></button>
                 </div>
                 <div class="ProjectCardImage">
-                    <img src="assets/project-cards/gov-data-finder-thumbnail.png" alt="Government Data Finder Mockup">
+                    <img src="assets/project-cards/gov-data-finder-thumbnail.png" alt="Government Data Finder mockup">
                 </div>
             </a>
+
+            <a href="the-newshouse-redesign.html" class="ProjectCard">
+                <div class="ProjectCardText">
+                    <div>
+                        <!-- <div class="TagsContainer">
+                            <p class="ProjectTag">UX Design</p>
+                            <p class="ProjectTag">User Research</p>
+                            <p class="ProjectTag">Visual Design</p>
+                        </div> -->
+                        <h3>Redesigning a student news website with a focus on creating a modular layout</h3>
+                    </div>
+                    <button href="the-newshouse-redesign.html" class="PrimaryButton">View project <img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                <div class="ProjectCardImage">
+                    <img src="assets/project-cards/newshouse-thumbnail.png" alt="Newshouse website redesign mockup">
+                </div>
+            </a>
+
+            <a href="coding-by-design.html" class="ProjectCard">
+                <div class="ProjectCardText">
+                    <div>
+                        <!-- <div class="TagsContainer">
+                            <p class="ProjectTag">UX Design</p>
+                            <p class="ProjectTag">User Research</p>
+                            <p class="ProjectTag">Visual Design</p>
+                        </div> -->
+                        <h3>Helping designers learn web development through the process of building their personal portfolio site</h3>
+                    </div>
+                    <button href="coding-by-design.html" class="PrimaryButton">View project <img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                <div class="ProjectCardImage">
+                    <img src="assets/project-cards/coding-by-design-thumbnail.png" alt="Coding by Design mockup">
+                </div>
+            </a>
+
+            <a href="ai-financial-advisor.html" class="ProjectCard">
+                <div class="ProjectCardText">
+                    <div>
+                        <!-- <div class="TagsContainer">
+                            <p class="ProjectTag">UX Design</p>
+                            <p class="ProjectTag">User Research</p>
+                            <p class="ProjectTag">Visual Design</p>
+                        </div> -->
+                        <h3>Ideating a tool to give people AI-powered financial advice as team leader of an internal hackathon project</h3>
+                    </div>
+                    <button href="ai-financial-advisor.html" class="PrimaryButton">View project <img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                <div class="ProjectCardImage">
+                    <img src="assets/project-cards/ai-financial-advisor-thumbnail.png" alt="AI Financial Advisor mockup">
+                </div>
+            </a>
+
+            
         </section>
     </main>
     
@@ -77,5 +131,6 @@
     
         
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
