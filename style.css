@@ -499,6 +499,17 @@ h1 {
 .LightH1 {
     letter-spacing: 2%;
 }
+.H1Eyebrow {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+@media only screen and (max-width: 600px) {
+    .H1Eyebrow {
+        font-size: 1rem;
+    }
+    
+}
 h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -570,6 +581,11 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
     font-weight: 400;
     line-height: 130%;
 }   
+.ProjectCardBoldBlue {
+    font-weight: 600;
+    color: #2156a6;
+    /* font-style: italic; */
+}
 .BodyLarge {
     font-size: 1.25rem;
     line-height: 140%;
@@ -635,6 +651,13 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
     color: #000;
     line-height: 150% !important;
 }
+@media only screen and (max-width: 630px) {
+    .HeroMainSubHeading {
+        font-size: 1.5rem;
+        line-height: 130% !important;
+    }
+}
+
 .VisualDesign {
     font-weight: 700;
     color: #4921A6;
@@ -928,11 +951,13 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     /* flex: 1; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     /* margin-right: -10rem; */
     position: relative; /* enables the overflow effect */
     height: 100%;
     padding-top: 2rem;
+    flex-direction: column;
+    gap: .5rem;
 }
 .CaseStudyHeroImage img {
     max-width: 42rem; /* slightly wider than container */
@@ -1119,3 +1144,160 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 
 
 /* #endregion CASE STUDY */
+
+/* #region ABOUT PAGE */
+
+/* Hero Section */
+
+.AboutHero {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    overflow: hidden;
+    /* background: rgba( 233, 233, 233, 0.75);
+    box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur( 26.5px );
+    -webkit-backdrop-filter: blur( 26.5px); */
+}
+
+.ImageCaption {
+    font-size: 0.9rem;
+    /* color: #666; */
+    /* text-align: center; */
+    /* margin-top: 0.5rem; */
+    /* font-style: italic; */
+}
+.CaseStudyHeroImage .ImageCaption {
+    /* margin-bottom: 2rem; */
+}
+
+/* Maps Grid Section */
+/* .AboutMapsSection {
+    margin-top: 3rem;
+    width: 100%;
+} */
+
+.MapsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+/* .MapsGrid__item {
+    position: relative;
+    min-height: 200px;
+} */
+
+/* .MapsGrid__item--large {
+    grid-row: span 2;
+} */
+
+.about-map-left-column, .about-map-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.MapsGrid__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.MapsGrid__quote {
+    grid-column: span 2;
+    background-color: #2156a6;
+    color: #ffffff;
+    padding: 2rem;
+    display: flex;
+    height: 100%;
+    /* align-items: center; */
+    /* justify-content: center; */
+    
+}
+
+.MapsGrid__quote p {
+    /* font-size: rem; */
+    /* line-height: 1.4;
+    text-align: center;
+    margin: 0; */
+}
+
+/* Responsive breakpoints */
+
+@media only screen and (max-width: 1200px) {
+
+    .MapsGrid {
+        display: flex;
+        flex-direction: column;
+    }
+    .MapsGrid__item {
+        min-height: unset !important;
+    }
+    .AboutHero {
+        display: flex;
+        flex-direction: column;
+        align-items: start !important;
+        gap: 0;
+    }
+    
+}
+
+@media only screen and (max-width: 1130px) {
+
+    .MapsGrid {
+        display: flex;
+        flex-direction: column;
+    }
+    .MapsGrid__item {
+        min-height: unset !important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .MapsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .MapsGrid__item--large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .MapsGrid__quote {
+        grid-column: span 2;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .MapsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .MapsGrid__item--large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .MapsGrid__quote {
+        grid-column: span 1;
+        padding: 1.5rem;
+    }
+    
+    .MapsGrid__quote p {
+        font-size: 1rem;
+    }
+    
+    .MapsGrid__item {
+        min-height: 250px;
+    }
+}
+
+/* #endregion ABOUT PAGE */

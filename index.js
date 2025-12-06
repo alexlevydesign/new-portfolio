@@ -10,9 +10,9 @@ const graphicDesignPages = ["Alex Levy's Portfolio — Graphic design", "CuseHac
 
 // Compare current page to array of all UX pages
 uxPages.forEach(page => {
-    console.log(page);
+    // console.log(page);
     if (currentPage === page) {
-        console.log("This is a UX page!")
+        // console.log("This is a UX page!")
         // document.getElementby("NavBarLinksChild").classList.add("CurrentPage");
         // console.log(document.getElementsByClassName("NavBarLinksChild")[1].innerHTML);
         document.getElementsByClassName("NavBarLinksChild")[1].classList.add("CurrentPage");
