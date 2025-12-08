@@ -42,3 +42,50 @@ projectCards.forEach(card => {
     }, { once: true });
   });
 });
+
+// Image Slider
+const slider = document.querySelector('.SliderImageContainer');
+const slides = document.querySelectorAll('.SliderImage');
+const prevBtn = document.getElementById('prevSlide');
+const nextBtn = document.getElementById('nextSlide');
+
+if (slider && slides.length > 0) {
+  let currentSlide = 0;
+
+  function updateSlider() {
+    // Remove active class from all slides
+    slides.forEach(slide => slide.classList.remove('SlideActive'));
+    
+    // Add active class to current slide
+    slides[currentSlide].classList.add('SlideActive');
+    
+    // Calculate the transform value
+    // Each slide takes up full width + gap
+    const slideWidth = slides[0].offsetWidth;
+    const gap = 32; // 2rem gap in pixels (approximate)
+    const offset = currentSlide * (slideWidth + gap);
+    
+    slider.style.transform = `translateX(-${offset}px)`;
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateSlider();
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', nextSlide);
+  }
+  
+  if (prevBtn) {
+    prevBtn.addEventListener('click', prevSlide);
+  }
+
+  // Initialize slider
+  updateSlider();
+}

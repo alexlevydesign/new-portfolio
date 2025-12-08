@@ -44,9 +44,19 @@ main {
   grid-column: 2;
 }
 
+/* .Layout.Slider {
+    display: grid;
+}
+
+.Layout.Slider .SliderImageContainer {
+    grid-column: 1 / 4 !important;
+    width: 100% !important;
+} */
+
 .FullBleed {
   width: 100%;
   grid-column: 1 / 4;
+  /* display: grid; */
 }
 
 .SectionPadding {
@@ -1313,3 +1323,98 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 }
 
 /* #endregion ABOUT PAGE */
+
+
+/* #region SLIDER */
+
+
+.Slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.SliderImageContainer {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2rem;
+    padding-left: 16rem;
+}
+
+.SliderImage {
+    flex-shrink: 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0.4;
+    width: 48rem;
+    /* width: calc(100vw - 16rem); */
+}
+
+.SliderImage.SlideActive {
+    opacity: 1;
+}
+
+.SliderImage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    outline: #000000 1px solid;
+}
+
+.SliderButtonGroup {
+    display: flex;
+    gap: 1rem;
+    padding-left: 16rem;
+}
+
+.SliderButtonGroup button {
+    background-color: rgba(33, 86, 166, 0.9);
+    padding: 0.75rem 1.25rem;
+}
+
+.SliderButtonGroup button:hover {
+    background-color: rgba(0, 0, 94, 0.9);
+}
+
+@media only screen and (max-width: 1300px) {
+    .SliderImageContainer {
+        padding-left: 3rem;
+    }
+    .SliderImage {
+        width: calc(100vw - 6rem);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .SliderImageContainer {
+        padding-left: 1.7rem;
+    }
+    .SliderImage {
+        width: calc(100vw - 3.4rem);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .SliderImageContainer {
+        padding-left: 1rem;
+    }
+    .SliderImage {
+        width: calc(100vw - 2rem);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .SliderImageContainer {
+        padding-left: 1.2rem;
+    }
+    .SliderImage {
+        width: calc(100vw - 2.4rem);
+    }
+}
+
+
+/* #endregion SLIDER */
