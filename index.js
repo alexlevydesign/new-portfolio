@@ -43,49 +43,96 @@ projectCards.forEach(card => {
   });
 });
 
-// Image Slider
-const slider = document.querySelector('.SliderImageContainer');
+// Slider functionality
+const sliderContainer = document.querySelector('.SliderImageContainer');
 const slides = document.querySelectorAll('.SliderImage');
-const prevBtn = document.getElementById('prevSlide');
-const nextBtn = document.getElementById('nextSlide');
+const prevButton = document.getElementById('prevSlide');
+const nextButton = document.getElementById('nextSlide');
+const prevButton2 = document.getElementById('prevSlide2');
+const nextButton2 = document.getElementById('nextSlide2');
 
-if (slider && slides.length > 0) {
-  let currentSlide = 0;
+if (sliderContainer && slides.length > 0) {
+    let currentSlide = 0;
+    let isTransitioning = false;
 
-  function updateSlider() {
-    // Remove active class from all slides
-    slides.forEach(slide => slide.classList.remove('SlideActive'));
-    
-    // Add active class to current slide
-    slides[currentSlide].classList.add('SlideActive');
-    
-    // Calculate the transform value
-    // Each slide takes up full width + gap
-    const slideWidth = slides[0].offsetWidth;
-    const gap = 32; // 2rem gap in pixels (approximate)
-    const offset = currentSlide * (slideWidth + gap);
-    
-    slider.style.transform = `translateX(-${offset}px)`;
-  }
+    function getLeftPadding() {
+        const width = window.innerWidth;
+        if (width <= 400) return 1.2 * 16; // 1.2rem in pixels
+        if (width <= 600) return 1 * 16; // 1rem in pixels
+        if (width <= 800) return 1.7 * 16; // 1.7rem in pixels
+        if (width <= 1300) return 3 * 16; // 3rem in pixels
+        return 16 * 16; // 16rem in pixels
+    }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
+    function updateSlider() {
+        // Calculate widths based on viewport, not current element widths
+        const viewportWidth = window.innerWidth;
+        const leftPadding = getLeftPadding();
+        const contentWidth = viewportWidth - (leftPadding * 2);
+        
+        // Active slide will be full content width, inactive will be 75% of that
+        const activeWidth = contentWidth;
+        const inactiveWidth = contentWidth * 0.75;
+        
+        // Calculate offset based on what widths WILL BE after transition
+        const gap = 32; // 2rem gap
+        let offset = 0;
+        for (let i = 0; i < currentSlide; i++) {
+            // Previous slides will all be inactive, so use inactive width
+            offset += inactiveWidth + gap;
+        }
+        
+        // Update active state
+        slides.forEach((slide, index) => {
+            if (index === currentSlide) {
+                slide.classList.add('SlideActive');
+            } else {
+                slide.classList.remove('SlideActive');
+            }
+        });
+        
+        sliderContainer.style.transform = `translateX(-${offset}px)`;
+    }
+
+    function nextSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 500); // Match CSS transition duration
+    }
+
+    function prevSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlider();
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 500); // Match CSS transition duration
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', nextSlide);
+    }
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', prevSlide);
+    }
+
+    if (nextButton2) {
+        nextButton2.addEventListener('click', nextSlide);
+    }
+    
+    if (prevButton2) {
+        prevButton2.addEventListener('click', prevSlide);
+    }
+
+    // Update on window resize
+    window.addEventListener('resize', updateSlider);
+
+    // Initial update
     updateSlider();
-  }
-
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    updateSlider();
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', nextSlide);
-  }
-  
-  if (prevBtn) {
-    prevBtn.addEventListener('click', prevSlide);
-  }
-
-  // Initialize slider
-  updateSlider();
 }

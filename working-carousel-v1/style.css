@@ -12,8 +12,8 @@ html {
 }
 
 body {
+
     background: #E9E9E9;
-    overflow-x: clip; /* Prevent horizontal scrolling on the page */
 }
 
 main {
@@ -43,6 +43,15 @@ main {
 .Layout > * {
   grid-column: 2;
 }
+
+/* .Layout.Slider {
+    display: grid;
+}
+
+.Layout.Slider .SliderImageContainer {
+    grid-column: 1 / 4 !important;
+    width: 100% !important;
+} */
 
 .FullBleed {
   width: 100%;
@@ -1319,17 +1328,12 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 /* #region SLIDER */
 
 
-/* .SliderImage::-webkit-scrollbar {
-    width: 8px;
-} */
-
-
 .Slider {
     position: relative;
-    overflow: visible; /* Allow slides to be visible outside bounds */
+    overflow: hidden;
     width: 100%;
-    /* padding-top: 2rem; */
-    /* padding-bottom: 2rem; */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -1339,50 +1343,32 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 2rem;
-    padding-left: 16rem; /* Aligns first image with Layout content (matching left margin of content) */
-    width: 100vw;
-    margin-left: calc(-16rem); /* Pull container left to screen edge */
+    padding-left: 16rem;
 }
 
-/* Make sure the transition duration is the same as the "isTransitioning" value in index.js */
-
-.SliderImage { 
+.SliderImage {
     flex-shrink: 0;
-    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     opacity: 0.4;
-    width: calc((100vw - 32rem) * 0.75); /* 75% of content width for inactive images */
-    height: 600px;
-    overflow-y: hidden;
-    scrollbar-gutter: stable;
-    /* outline: #000000 1px solid; */
-    -webkit-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
--moz-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
-/* transition: .3s ease-in-out; */
-    
+    width: 48rem;
+    /* width: calc(100vw - 16rem); */
 }
 
 .SliderImage.SlideActive {
     opacity: 1;
-    width: calc(100vw - 32rem); /* Full content width for active image */
-    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out box-shadow 0.5s ease-in-out;
-    overflow-y: scroll;
-    -webkit-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.40);
--moz-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.40);
-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.40);
 }
 
 .SliderImage img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    outline: #000000 1px solid;
 }
 
 .SliderButtonGroup {
     display: flex;
     gap: 1rem;
-    /* padding-left: 16rem;
-    padding-right: 16rem; */
+    padding-left: 16rem;
 }
 
 .SliderButtonGroup button {
@@ -1397,75 +1383,37 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.40);
 @media only screen and (max-width: 1300px) {
     .SliderImageContainer {
         padding-left: 3rem;
-        margin-left: calc(-3rem);
     }
     .SliderImage {
-        width: calc((100vw - 6rem) * 0.75);
-    }
-    .SliderImage.SlideActive {
         width: calc(100vw - 6rem);
     }
-    /* .SliderButtonGroup {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    } */
 }
 
 @media only screen and (max-width: 800px) {
     .SliderImageContainer {
         padding-left: 1.7rem;
-        margin-left: calc(-1.7rem);
     }
     .SliderImage {
-        width: calc((100vw - 3.4rem) * 0.75);
-    }
-    .SliderImage.SlideActive {
         width: calc(100vw - 3.4rem);
     }
-    /* .SliderButtonGroup {
-        padding-left: 1.7rem;
-        padding-right: 1.7rem;
-    } */
 }
 
 @media only screen and (max-width: 600px) {
     .SliderImageContainer {
         padding-left: 1rem;
-        margin-left: calc(-1rem);
     }
     .SliderImage {
-        width: calc((100vw - 2rem) * 0.75);
-        height: auto;
-        scrollbar-gutter:unset !important;
-        overflow-y: unset;
-    }
-    .SliderImage.SlideActive {
         width: calc(100vw - 2rem);
-        overflow-y: unset;
     }
-    /* .SliderButtonGroup {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    } */
 }
 
 @media only screen and (max-width: 400px) {
     .SliderImageContainer {
         padding-left: 1.2rem;
-        margin-left: calc(-1.2rem);
     }
     .SliderImage {
-        width: calc((100vw - 2.4rem) * 0.75);
-        overflow-y: unset;
-    }
-    .SliderImage.SlideActive {
         width: calc(100vw - 2.4rem);
-        overflow-y: unset;
     }
-    /* .SliderButtonGroup {
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-    } */
 }
 
 
