@@ -1420,6 +1420,9 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.40);
             width: 100%;
             overflow-y: visible;
             height: min-content;
+            -webkit-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
+box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
         }
         .SliderImage {
             width: 100%;
