@@ -131,7 +131,22 @@ if (sliderContainer && slides.length > 0) {
     }
 
     // Update on window resize
-    window.addEventListener('resize', updateSlider);
+    window.addEventListener('resize', () => {
+        const width = window.innerWidth;
+        const wasAbove1300 = window.previousWidth > 1300;
+        const isBelow1300 = width <= 1300;
+        
+        // Reset to first slide when crossing the 1300px breakpoint going down
+        if (wasAbove1300 && isBelow1300) {
+            currentSlide = 0;
+        }
+        
+        window.previousWidth = width;
+        updateSlider();
+    });
+
+    // Store initial width
+    window.previousWidth = window.innerWidth;
 
     // Initial update
     updateSlider();
