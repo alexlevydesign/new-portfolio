@@ -1121,7 +1121,7 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 .ContentCard img, .ContentCard video {
     /* width: 25rem; */
     max-width: 100%;
-    height: fit-content;
+    /* height: fit-content; */
     }
     .CardRow {
         display: flex;
