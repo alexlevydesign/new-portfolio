@@ -152,3 +152,35 @@ sliders.forEach((slider) => {
         updateSlider();
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all video elements with the class 'AutoplayVideo'
+    const videos = document.querySelectorAll('video.AutoplayVideo');
+
+    // Create an IntersectionObserver instance
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.intersectionRatio >= 0.5) {
+                // Play the video when 50% or more of it is visible
+                if (video.paused) {
+                    video.play();
+                }
+            } else {
+                // Pause the video when less than 50% of it is visible
+                if (!video.paused) {
+                    video.pause();
+                }
+            }
+        });
+    }, {
+        threshold: [0.5]
+    });
+
+    // Ensure videos are paused and set to lazy load on page load
+    videos.forEach(video => {
+        video.pause();
+        video.setAttribute('preload', 'none');
+        observer.observe(video);
+    });
+});
