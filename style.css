@@ -26,8 +26,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: .75rem;
-    width: clamp(30rem, 60vw, 60rem);
-    align-self: center;
+    /* width: clamp(30rem, 60vw, 60rem);
+    align-self: center; */
 }
 .ProjectsGroup {
     display: flex;
@@ -46,9 +46,10 @@ main {
     padding: 0 !important;
 }
 .Wide {
-    width: 80vw !important;
-    padding: 0;
-    align-self: center;
+    /* width: 80vw !important; */
+    padding: 0 10vw !important;
+    /* padding: 0; */
+    /* align-self: center; */
 }
 /* .Layout > * {
   grid-column: 2;
@@ -255,6 +256,9 @@ button img {
     .CaseStudyPart {
         width: 100% !important;
     }
+    .NavBar, .Wide {
+        padding: 0 5vw !important;
+    }
 }
 @media only screen and (max-width: 400px) {
     .SectionPadding, .SectionPaddingLeftOnly, .CaseStudyMainContent{
@@ -293,9 +297,9 @@ button img {
     .ProjectHeroDescription {
         max-width: unset !important;
     }
-    .Wide {
+    /* .Wide {
         width: 90vw !important;
-    }
+    } */
 }
 @media only screen and (max-width: 400px) {
     .NavBarLinksChild {
@@ -380,8 +384,8 @@ nav {
     backdrop-filter: blur( 26.5px );
     -webkit-backdrop-filter: blur( 26.5px);
     padding: 0 10vw !important;
-    align-self: center;
-    width: 80vw !important;
+    /* align-self: center; */
+    /* width: 80vw !important; */
 }
 .NavBarLinks {
     /* position: absolute;
@@ -510,14 +514,17 @@ footer a:hover, footer a:active {
 
 /* #region TYPOGRAPHY */
 h1 {
-    font-size: 3.5rem;
+    font-family: 'Lora', 'Montserrat', Verdana, sans-serif;
+    /* letter-spacing: .006em; */
+    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 700;
     /* width:fit-content; */
     /* border-bottom: 4px solid #2156a6;
     padding-bottom: 4px; */
     /* margin-right: 10%; */
     margin-top: 0;
-    line-height: 130%;
+    line-height: 115%;
     widows: 1;
     /* padding-right: 0 !important; */
     color: #2156a6;
@@ -542,10 +549,13 @@ h1 {
     
 }
 h2 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-family: 'Lora', 'Montserrat', Verdana, sans-serif;
+    font-size: 2.7rem;
+    font-weight: 600;
     color: #2156a6;
-    line-height: 135%;
+    line-height: 115%;
+    /* letter-spacing: .03em; */
+
 }
 h3 {
     font-size: 2.25rem;
@@ -1014,6 +1024,8 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 .CaseStudyHero {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1024,11 +1036,14 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.25);
     backdrop-filter: blur( 26.5px );
     -webkit-backdrop-filter: blur( 26.5px);
+    padding: 2rem 10vw !important;
+  align-self: center;
 }
 .CaseStudyHeroText h1 {
     width: 100%;
     margin-right: 0;
     text-align: left; /* keeps your alignment */
+    /* text-wrap: unset !important; */
 }
 .CaseStudyHeroText {
     /* flex: 1; */
@@ -1037,8 +1052,8 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     flex-direction: column;
     gap: 1.5rem;
     text-wrap: balance;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    /* padding-top: 2rem;
+    padding-bottom: 2rem; */
     
 }
 
@@ -1051,12 +1066,12 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     /* margin-right: -10rem; */
     position: relative; /* enables the overflow effect */
     height: 100%;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     flex-direction: column;
     gap: .5rem;
 }
 .CaseStudyHeroImage img {
-    max-width: 42rem; /* slightly wider than container */
+    max-width: 32rem; /* slightly wider than container */
     height: auto;
     object-fit: cover;
     height: 100%;
@@ -1211,12 +1226,15 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
         gap: 0;
     }
     .CaseStudyHeroText {
-        align-items: center;
+        align-items: center !important;
         padding-bottom: 0;
     }
-    .CaseStudyHeroText .PrimaryButton {
-        align-self: self-start;
+    .CaseStudyHeroText > h1, .CaseStudyHeroText > p {
+        text-align: center !important;
     }
+    /* .CaseStudyHeroText .PrimaryButton {
+        align-self: self-start;
+    } */
     .CaseStudyHeroText, .CaseStudyHeroText h1 {
         text-wrap: initial;
         max-width: 42rem;
@@ -1228,7 +1246,7 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     .CaseStudyHeroImage img {
         /* padding-right: 4rem;
         padding-left: 4rem; */
-        width: 100%;
+        max-width: 100%;
     }
     .CaseStudyMainContent {
         display: flex;
@@ -1326,8 +1344,8 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     justify-content: space-between;
     gap: 4rem;
     overflow: hidden;
-    width: 80vw !important;
-    align-self: center;
+    /* width: 80vw !important; */
+    /* align-self: center; */
     /* background: rgba( 233, 233, 233, 0.75);
     box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.25);
     backdrop-filter: blur( 26.5px );
@@ -1355,8 +1373,8 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 }
 
 .AboutMapsSection > * {
-    width: 80vw;
-    align-self: center;
+    /* width: 80vw; */
+    /* align-self: center; */
 }
 
 .MapsGrid {
@@ -1502,7 +1520,7 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 
 .SliderImageContainer {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.7s cubic-bezier(0.00,1.00,0.32,1.00);
     gap: 2rem;
     padding-left: 16rem; /* Aligns first image with Layout content (matching left margin of content) */
     width: 100vw;
@@ -1514,7 +1532,9 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 
 .SliderImage { 
     flex-shrink: 0;
-    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
+    /* transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out; */
+    transition: opacity 0.7s cubic-bezier(0.00,0.99,0.12,0.97), width 0.7s cubic-bezier(0.00,0.99,0.12,0.97);
+    /* transition: cubic-bezier(0.25,0.10,0.25,1.00); */
     opacity: 0.4;
     width: calc((100vw - 32rem) * 0.75); /* 75% of content width for inactive images */
     height: 600px;
@@ -1531,7 +1551,8 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 .SliderImage.SlideActive {
     opacity: 1;
     width: calc(100vw - 32rem); /* Full content width for active image */
-    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out box-shadow 0.5s ease-in-out;
+    /* transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out box-shadow 0.5s ease-in-out; */
+   transition: opacity 0.7s cubic-bezier(0.00,0.99,0.12,0.97), width 0.7s cubic-bezier(0.00,0.99,0.12,0.97);
     overflow-y: scroll;
     -webkit-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.40);
 -moz-box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.40);
