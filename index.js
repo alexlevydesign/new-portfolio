@@ -67,21 +67,21 @@ sliders.forEach((slider) => {
         }
 
         function updateSlider() {
-            // Calculate widths based on viewport, not current element widths
+            // Calculate slide width to match CSS: clamp(30rem, 60vw, 60rem)
             const viewportWidth = window.innerWidth;
-            const leftPadding = getLeftPadding();
-            const contentWidth = viewportWidth - (leftPadding * 2);
+            const minWidth = 30 * 16; // 30rem in pixels
+            const maxWidth = 60 * 16; // 60rem in pixels
+            const preferredWidth = viewportWidth * 0.6; // 60vw
             
-            // Active slide will be full content width, inactive will be 75% of that
-            const activeWidth = contentWidth;
-            const inactiveWidth = contentWidth * 0.75;
+            // Calculate the actual width based on clamp (same for active and inactive now)
+            const slideWidth = Math.max(minWidth, Math.min(preferredWidth, maxWidth));
             
-            // Calculate offset based on what widths WILL BE after transition
+            // Calculate offset based on slide width
             const gap = 32; // 2rem gap
             let offset = 0;
             for (let i = 0; i < currentSlide; i++) {
-                // Previous slides will all be inactive, so use inactive width
-                offset += inactiveWidth + gap;
+                // All slides have the same width
+                offset += slideWidth + gap;
             }
             
             // Update active state
