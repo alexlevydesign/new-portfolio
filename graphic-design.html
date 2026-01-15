@@ -14,10 +14,12 @@
 </head>
 <body>
     <a id="skip" href="#content">Skip to Content</a>
-    <nav>
-        <div class="NavBar">
+    <div class="NavBar">
             <div class="NavBarLogo">
-                <a href="index.html"><img src="assets/personal-branding/Lockup-white.svg" alt="Alex Levy"></a>
+                <a href="index.html">
+                    <img class="NavBarLogoDesktop" src="assets/personal-branding/Lockup-white.svg" alt="Alex Levy">
+                    <img class="NavBarLogoMobile" src="assets/personal-branding/Lockup-blue.svg" alt="Alex Levy">
+                </a>
             </div>
             <div class="NavBarLinks">
                 <div class="NavBarLinksChild NavLinkHome NavLinkMargin"><a href="index.html">Home</a></div>
@@ -28,12 +30,13 @@
                 <div class="NavBarLinksChild NavLinkAbout"><a href="about.html">About</a><div></div></div>
             </div>
         </div>
-    </nav>
     <main id="content">
+        <header>
         <video class="HeroAnimation AutoplayVideo" src="portfolio-animation/output/Portfolio-animation-v2.mp4" autoplay loop muted playsinline></video>
         <div class="Layout HeroHome"> <!-- "Layout" needs to be applied to the parent, and "Wide" needs to be applied to the children to get the proper padding/width -->
             <div class="HeroHomeHeading Wide">
-                <h1><span class="H1Eyebrow">In addition to UX design,</span><br>I also do graphic design</h1>
+                <!-- <h1><span class="H1Eyebrow">In addition to UX design,</span><br>I also do graphic design</h1> -->
+                <h1>I also do graphic design</h1>
                 <p><span class="HeroMainSubHeading">With handy skills in <span class="VisualDesign">web design,</span><span class="UserResearch"> motion design,</span> and <span class="FrontEndDev">data visualization</span></span></p>
             </div>
             <div class="Wide">

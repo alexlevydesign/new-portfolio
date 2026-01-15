@@ -27,6 +27,14 @@ graphicDesignPages.forEach(page => {
     }
 });
 
+
+// Highlight "About me" page in navbar
+    if (currentPage === "About me") {
+        // console.log("This is a graphic design page!")
+        document.getElementsByClassName("NavBarLinksChild")[3].classList.add("CurrentPage");
+    }
+
+
 const projectCards = document.querySelectorAll(".ProjectCard");
 
 projectCards.forEach(card => {

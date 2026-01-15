@@ -1103,6 +1103,7 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     /* padding-top: 2rem; */
     flex-direction: column;
     gap: .5rem;
+    width: 100%;
 }
 .CaseStudyHeroImage img {
     max-width: 32rem; /* slightly wider than container */
@@ -1256,15 +1257,15 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 @media only screen and (max-width: 1200px) {
     .CaseStudyHero {
         flex-direction: column-reverse;
-        align-items: center !important;
+        /* align-items: center !important; */
         gap: 0;
     }
     .CaseStudyHeroText {
-        align-items: center !important;
+        /* align-items: center !important; */
         padding-bottom: 0;
     }
     .CaseStudyHeroText > h1, .CaseStudyHeroText > p {
-        text-align: center !important;
+        /* text-align: center !important; */
     }
     /* .CaseStudyHeroText .PrimaryButton {
         align-self: self-start;
@@ -1275,6 +1276,7 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     }
     .CaseStudyHeroImage {
         max-width: 100%;
+        width: 100%;
         padding-top: 2rem;
     }
     .CaseStudyHeroImage img {
