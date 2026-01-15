@@ -275,9 +275,19 @@ button img {
 
 @media only screen and (max-width: 850px) {
 
+    .ProjectHeroDescription {
+        max-width: unset !important;
+    }
+    /* .Wide {
+        width: 90vw !important;
+    } */
+}
+
+@media only screen and (max-width: 850px) {
+
     .NavBar.NavBar {
         flex-direction: column;
-        gap: 1rem;
+        gap: .75rem;
         padding-bottom: 1rem;
         /* width: 100% !important; */
         padding:unset;
@@ -301,6 +311,7 @@ button img {
         width: 90vw !important;
     } */
 }
+
 @media only screen and (max-width: 400px) {
     .NavBarLinksChild {
         font-size: 1rem;
@@ -346,7 +357,8 @@ button img {
         /* height: ; */
         padding: 0rem;
         /* border-radius: 20; */
-        background-color: #2156a6;
+        /* background-color: #2156a6; */
+        
 }
 .NavBarLogo img {
         background-color: #2156a6;
@@ -357,11 +369,18 @@ button img {
         padding: 1rem;
         height: 5rem;
         width: 5rem;
+        color: #00005e;
 }
 .NavBarLogo a {
 font-size: 0;
 width: max-content;
 display: block;
+}
+.NavBarLogoDesktop {
+    display: block;
+}
+.NavBarLogoMobile {
+    display: none;
 }
 nav {
     position: sticky;
@@ -460,6 +479,16 @@ nav {
         flex-direction: column;
         gap: 1rem !important;
     }
+    .NavBarLogo img {
+        background-color: unset;
+        padding-bottom: .25rem;
+    }
+    .NavBarLogoDesktop {
+        display: none;
+    }
+    .NavBarLogoMobile {
+        display: block;
+}
 }
 
 footer {
@@ -757,10 +786,13 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
 }
 .HeroMainSubHeading {
     /* text-transform: uppercase; */
-    font-size: 1.75rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 500;
     color: #000;
-    line-height: 150% !important;
+    line-height: 140% !important;
+}
+p:has(.HeroMainSubHeading) {
+    text-wrap: pretty;
 }
 @media only screen and (max-width: 630px) {
     .HeroMainSubHeading {
@@ -780,6 +812,7 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
 .FrontEndDev {
     font-weight: 700;
     color: #A62137;
+    text-wrap: pretty;
 }
 .HeroHome {
     display: flex;
@@ -790,7 +823,7 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
 .HeroHomeHeading {
     display: flex;
     flex-direction: column;
-    /* gap: -4rem; */
+    gap: .75rem
 }
 .HeroHalfWidth {
     max-width: 45rem;
