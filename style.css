@@ -86,6 +86,19 @@ img {
     display: block;
     image-orientation: none; /* fix for rotated images on Safari */
 }
+
+/* Lazy loading styles - fade in when loaded */
+img:not(.NavBarLogoDesktop):not(.NavBarLogoMobile):not(.LinkedinLogo):not(.loaded) {
+    opacity: 0;
+}
+img:not(.NavBarLogoDesktop):not(.NavBarLogoMobile):not(.LinkedinLogo).loaded,
+img.NavBarLogoDesktop,
+img.NavBarLogoMobile,
+img.LinkedinLogo {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
 .ProjectMainSection img {
     border: 1px solid rgb(201, 201, 201);
 }
