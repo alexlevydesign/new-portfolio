@@ -192,3 +192,39 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(video);
     });
 });
+
+// Mobile navbar scroll behavior
+(function() {
+    let lastScrollTop = 0;
+    let scrollThreshold = 400; // Minimum scroll amount to trigger hide/show
+    const nav = document.querySelector('nav');
+    
+    // Exit if nav doesn't exist on this page
+    if (!nav) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Check if user is at the top of the page
+        if (scrollTop <= 0) {
+            nav.classList.remove('nav-hidden');
+            return;
+        }
+        
+        // Check if scroll difference is significant enough
+        if (Math.abs(scrollTop - lastScrollTop) < scrollThreshold) {
+            return;
+        }
+        
+        // Scrolling down - hide navbar
+        if (scrollTop > lastScrollTop) {
+            nav.classList.add('nav-hidden');
+        } 
+        // Scrolling up - show navbar
+        else {
+            nav.classList.remove('nav-hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    }, false);
+})();

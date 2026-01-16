@@ -388,7 +388,16 @@ nav {
     z-index: 100;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease-in-out;
     /* margin-bottom: 2rem; */
+}
+
+/* Hide navbar on mobile when scrolling down */
+@media only screen and (max-width: 850px) {
+    nav.nav-hidden {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
 }
 .NavLinkHome {
     display: none !important;
