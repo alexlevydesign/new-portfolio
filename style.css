@@ -65,7 +65,7 @@ main {
 .SectionPadding {
     /* padding-left: 16rem; */
     /* padding-right: 16rem; */
-    padding: 0 calc((100vw - clamp(30rem, 60vw, 60rem))/2) !important;
+    padding: 0 calc((100vw - clamp(30rem, 50vw, 60rem))/2) !important;
 }
 .SectionPaddingLeftOnly {
     padding-left: 8rem;
@@ -1131,7 +1131,7 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
-    width: clamp(30rem, 60vw, 60rem);
+    width: clamp(30rem, 50vw, 60rem);
     align-self: center;
 }
 /* .CaseStudySection {
@@ -1567,9 +1567,9 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     display: flex;
     transition: transform 0.7s cubic-bezier(0.00,1.00,0.32,1.00);
     gap: 2rem;
-    padding-left: calc((100vw - clamp(30rem, 60vw, 60rem)) / 2); /* Center align with CaseStudyPart */
+    padding-left: calc((100vw - clamp(30rem, 50vw, 60rem)) / 2); /* Center align with CaseStudyPart */
     width: 100vw;
-    margin-left: calc(-1 * (100vw - clamp(30rem, 60vw, 60rem)) / 2); /* Pull container left to screen edge */
+    margin-left: calc(-1 * (100vw - clamp(30rem, 50vw, 60rem)) / 2); /* Pull container left to screen edge */
     max-width: 100vw;
 }
 
@@ -1581,7 +1581,7 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
     transition: opacity 0.7s cubic-bezier(0.00,0.99,0.12,0.97), width 0.7s cubic-bezier(0.00,0.99,0.12,0.97);
     /* transition: cubic-bezier(0.25,0.10,0.25,1.00); */
     opacity: 0.4;
-    width: clamp(30rem, 60vw, 60rem);
+    width: clamp(30rem, 50vw, 60rem);
     /* 75% of content width for inactive images */
     /* width: calc((100vw - 32rem) * 0.75); */
     height: 600px;
@@ -1598,7 +1598,7 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 .SliderImage.SlideActive {
     opacity: 1;
     /* width: clamp(30rem, 60vw, 60rem); */
-    width: clamp(30rem, 60vw, 60rem);
+    width: clamp(30rem, 50vw, 60rem);
     /* Full content width for active image */
     /* width: calc(100vw - 32rem); */
     /* transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out box-shadow 0.5s ease-in-out; */

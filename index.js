@@ -75,11 +75,11 @@ sliders.forEach((slider) => {
         }
 
         function updateSlider() {
-            // Calculate slide width to match CSS: clamp(30rem, 60vw, 60rem)
+            // Calculate slide width to match CSS: clamp(30rem, 50vw, 60rem)
             const viewportWidth = window.innerWidth;
             const minWidth = 30 * 16; // 30rem in pixels
             const maxWidth = 60 * 16; // 60rem in pixels
-            const preferredWidth = viewportWidth * 0.6; // 60vw
+            const preferredWidth = viewportWidth * 0.5; // 50vw
             
             // Calculate the actual width based on clamp (same for active and inactive now)
             const slideWidth = Math.max(minWidth, Math.min(preferredWidth, maxWidth));
