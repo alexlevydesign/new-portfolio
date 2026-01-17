@@ -50,29 +50,51 @@
             <!-- RESEARCH -->
             <div class="CaseStudyPart">
                 <h2>Research</h2>
+
                 <div class="SectionMiniContent">
                     <div class="ContentBlock">
-    
                         <h3>The problems newcomers have with government data</h3>
                         <p>I interviewed experts such as librarians and professors — people who often work with newcomers to government data — to understand the problems people face in finding this data.</p>
-    
                     </div>
     
-                    <div class="CardRow">
+                    <div class="CardColumn">
                         <div class="ContentCard">
-                            <h4>Knowing who has what data</h4>
-                            <p>Finding the government agency that collects specific data isn’t always easy or intuitive, especially for newcomers.</p>
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Knowing who has what data</h4>
+                                    </div>
+                                    <p>Finding the government agency that collects specific data isn’t always easy or intuitive, especially for newcomers.</p>
+                                </div>
+                            </div>
                         </div>
+        
                         <div class="ContentCard">
-                            <h4>Using data without understanding it</h4>
-                            <p>Many people don’t read the metadata, which is essential in understanding what the data does (and doesn’t) show.</p>
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Using data without understanding it</h4>
+                                    </div>
+                                    <p>Many people don’t read the metadata, which is essential in understanding what the data does (and doesn’t) show.</p>
+                                </div>
+                            </div>
                         </div>
+        
                         <div class="ContentCard">
-                            <h4>Putting data in context takes extra work</h4>
-                            <p>The data usually needs to be downloaded and put in other programs so you can combine it with other data sets or visualize it to see if it is what you want.</p>
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Putting data in context takes extra work</h4>
+                                    </div>
+                                    <p>The data usually needs to be downloaded and put in other programs so you can combine it with other data sets or visualize it to see if it is what you want.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+
                 <div class="SectionMiniContent">
                     <div class="ContentBlock">
                         <h3>So, who are these newcomers?</h3>
@@ -84,23 +106,39 @@
                         <h3>Further research</h3>
                         <p>After researching both government data and how people find data, I discovered many insights, two of which are listed here.</p>
                     </div>
+
                     <div class="CardColumn">
                         <div class="ContentCard">
-                            <h4>The information search process can be discouraging</h4>
-                            <p>From library science research, I learned that researchers can often get discouraged during the information search process, due in part to relevant data being hard to find.</p>
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>The information search process can be discouraging</h4>
+                                    </div>
+                                    <p>From library science research, I learned that researchers can often get discouraged during the information search process, due in part to relevant data being hard to find.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="ContentCard Row">
-                            <div>
-                                <h4>Congressional inaction shows a gap</h4>
-                                <p>I found keywords defined in legislation mandating the federal government work towards implementing open data standards, but also found hardly any mention of these keywords in agency testimony to Congress, indicating that there could be an opportunity to make government open data easier to find, since the government wasn’t making much progress on it.</p>
+        
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Congressional inaction shows a gap</h4>
+                                    </div>
+                                    <p>I found keywords defined in legislation mandating the federal government work towards implementing open data standards, but also found hardly any mention of these keywords in agency testimony to Congress, indicating that there could be an opportunity to make government open data easier to find, since the government wasn’t making much progress on it.</p>
+                                </div>
                             </div>
-                            <div>
-                                <img src="assets/gov-data-finder/process/congressional-innaction.png" alt="">
+
+                            <div class="ContentCardImage">
+                                <img src="assets/gov-data-finder/process/congressional-innaction 2.png" alt="A search result showing only 6 records for the term 'open data' in Congressional testimony.">
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+            
+            
 
 
             <!-- Initial wireframing and testing -->
@@ -116,19 +154,33 @@
     
                     <div class="CardColumn">
                         <div class="ContentCard">
-                            <h4>My initial design solution</h4>
-                            <p>Since geospatial (aka location-based) data has unique traits compared to other types of data, <b class="FrontEndDev">I thought that having the geospatial file format filters at the top of the sidebar</b> (away from the general data format filters) would help people looking for geospatial data start their search with relevant filters.</p>
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>My initial design solution</h4>
+                                    </div>
+                                    <p>Since geospatial (aka location-based) data has unique traits compared to other types of data, I thought that having the geospatial file format filters at the top of the sidebar (away from the general data format filters) would help people looking for geospatial data start their search with relevant filters.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="Row TwoMediaCard ContentCard">
-                            <div class="Column GapUnset">
-                                <h4>Confusion during user testing</h4>
-                                <p><b class="FrontEndDev">A librarian who often works with newcomers to government data was confused when he looked at the general data formats section and couldn’t find the geospatial formats there.</b> This showed me that I needed to make the geospatial filters more prominent to help users looking for location-based data.</p>
+        
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Confusion during user testing</h4>
+                                    </div>
+                                    <p>A librarian who often works with newcomers to government data was confused when he looked at the general data formats section and couldn’t find the geospatial formats there. This showed me that I needed to make the geospatial filters more prominent to help users looking for location-based data.</p>
+                                </div>
                             </div>
+
                             <div>
-                                <img src="assets/gov-data-finder/process/WF Search 3.png" alt="">
+                                <img src="assets/gov-data-finder/process/WF Search 3.png" alt="A wireframe showing geospatial file format filters.">
                             </div>
+
                         </div>
                     </div>
+
                 </div>
                 <div class="SectionMiniContent">
                     <div class="ContentBlock">
@@ -150,31 +202,34 @@
 
 
             <!-- Final designs -->
+
+            
             <div class="CaseStudyPart" id="final-designs">
                 <h2>Final designs</h2>
-                <div class="SectionMiniContent">
-                    <div class="ContentBlock Column">
-                        <img src="assets/gov-data-finder/final/SearchStepOne.png" alt="">
-                        <img src="assets/gov-data-finder/final/SearchStepTwo.png" alt="">
-                        <img src="assets/gov-data-finder/final/SearchStepThree.png" alt="">
-                        <img src="assets/gov-data-finder/final/DiscussionBoard.png" alt="">
-                        
+                <div class="Slider FullBleed">
+                    <div class="SliderButtonGroup">
+                        <button class="SliderPrevButton PrimaryButton" aria-label="Previous slide"><img src="assets/icons/arrow-left.svg" alt=""></button>
+                        <button class="SliderNextButton PrimaryButton" aria-label="Next slide"><img src="assets/icons/arrow-right.svg" alt=""></button>
                     </div>
-    
-                    <!-- <div class="CardColumn">
-                        <div class="ContentCard">
-                            <h4>My initial design solution</h4>
-                            <p>Since geospatial (aka location-based) data has unique traits compared to other types of data, <b class="FrontEndDev">I thought that having the geospatial file format filters at the top of the sidebar</b> (away from the general data format filters) would help people looking for geospatial data start their search with relevant filters.</p>
+                    <div class="SliderImageContainer">
+                        <div class="SliderImage SlideActive">
+                            <img src="assets/gov-data-finder/final/SearchStepOne.png" alt="Step 1 of the search process.">
                         </div>
-                        <div class="Row TwoMediaCard ContentCard">
-                            <div class="Column">
-                                <h4>Confusion during user testing</h4>
-                                <p><b class="FrontEndDev">A librarian was confused when he looked at the general data formats section and couldn’t find the geospatial formats there.</b> This showed me that I needed to make the geospatial filters more prominent to help users looking for location-based data.</p>
-                            </div>
-                            <img src="assets/gov-data-finder/process/WF Search 3.png" alt="">
+                        <div class="SliderImage">
+                            <img src="assets/gov-data-finder/final/SearchStepTwo.png" alt="Step 2 of the search process.">
                         </div>
-                    </div> -->
-                </div>
+                        <div class="SliderImage">
+                            <img src="assets/gov-data-finder/final/SearchStepThree.png" alt="Step 3 of the search process.">
+                        </div>
+                        <div class="SliderImage">
+                            <img src="assets/gov-data-finder/final/DiscussionBoard.png" alt="Discussion board">
+                        </div>
+                    </div>
+                    <div class="SliderButtonGroup">
+                        <button class="SliderPrevButton PrimaryButton" aria-label="Previous slide"><img src="assets/icons/arrow-left.svg" alt=""></button>
+                        <button class="SliderNextButton PrimaryButton" aria-label="Next slide"><img src="assets/icons/arrow-right.svg" alt=""></button>
+                    </div>
+                    </div>
             </div>
             
             <!-- Lessons learned -->
@@ -182,8 +237,32 @@
                 <h2>Lessons learned</h2>
                 <div class="SectionMiniContent">
             
+                    <div class="CardColumn">
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Working in a complex domain</h4>
+                                    </div>
+                                    <p>As someone who doesn’t have a lot of background knowledge of government data, I quickly got up to speed on the problems and constraints that would come with making a tool like this.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Research comes in many forms</h4>
+                                    </div>
+                                    <p>I conducted UX research for this project in some interesting ways, such as searching through Congressional transcripts, analyzing existing interfaces, talking to experts, and reading academic articles to better understand the topic and problems.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
     
-                    <div class="CardRow">
+                    <!-- <div class="CardRow">
                         <div class="ContentCard">
                             <h4>Working in a complex domain</h4>
                             <p>As someone who doesn’t have a lot of background knowledge of government data, I quickly got up to speed on the problems and constraints that would come with making a tool like this.</p>
@@ -192,7 +271,7 @@
                             <h4>Research comes in many forms</h4>
                             <p>I conducted UX research for this project in some interesting ways, such as searching through Congressional transcripts, analyzing existing interfaces, talking to experts, and reading academic articles to better understand the topic and problems.</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
