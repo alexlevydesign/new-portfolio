@@ -686,6 +686,10 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
     line-height: 130%;
     font-weight: 300;
 }
+.BodySmall {
+    font-size: 1rem;
+    font-weight: 300;
+}
 .RelatedList {
     display: flex;
     flex-direction: column;
@@ -719,9 +723,10 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
 }
 .KeyInsightCard {
     display: flex;
-    flex-direction: row !important;
+    flex-direction: column !important;
+    gap: .75rem !important;
 }
-.KeyInsightCard div {
+/* .KeyInsightCard div {
     content: "//" 2rem;
     height: 100px;
     width: 100px;
@@ -729,9 +734,17 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
     font-size: 3rem;
     line-height: 100%;
     font-weight: 700;
-    /* margin-right: .25rem; */
     color: #2156a6;
+} */
+
+.AlignedIcon {
+    /* height: 100%; */
+    /* height: max-content; */
 }
+ .AlignedIcon img {
+    width: 2rem;
+    /* width: 100%; */
+ }
 .Blue {
     color: #2156a6 !important;
 }

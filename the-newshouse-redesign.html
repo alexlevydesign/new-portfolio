@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Newshouse Redesign</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a id="skip" href="#content">Skip to Content</a>
+    <nav>
+        <div class="NavBar">
+            <div class="NavBarLogo">
+                <a href="index.html">
+                    <img class="NavBarLogoDesktop" src="assets/personal-branding/Lockup-white.svg" alt="Alex Levy">
+                    <img class="NavBarLogoMobile" src="assets/personal-branding/Lockup-blue.svg" alt="Alex Levy">
+                </a>
+            </div>
+            <div class="NavBarLinks">
+                <div class="NavBarLinksChild NavLinkHome NavLinkMargin"><a href="index.html">Home</a></div>
+                <!-- <div class="NavBarLinksChild NavLinkProjects NavLinkMargin"><a href="index.html#Projects">Projects</a></div> -->
+                <!-- <div class="NavBarLinksChild NavLinkContact NavLinkMargin"><a href="index.html#Contact">Contact</a></div> -->
+                <div class="NavBarLinksChild NavLinkAbout"><a href="index.html">UI & UX</a><div></div></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="graphic-design.html">Graphic Design</a><div></div></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="about.html">About</a><div></div></div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="content">
+        <header class="CaseStudyHero">
+            <div class="CaseStudyHeroImage">
+                <img src="assets/project-cards/newshouse-thumbnail.png" alt="The Newshouse redesign mockup.">
+            </div>
+            <div class="CaseStudyHeroText">
+                <h1>Redesigning a student news website with a focus on creating a modular layout.</h1>
+                <div class="ContentBlock">
+                    <p>The Newshouse is a news website at Syracuse University  intended to give student journalists experience writing for a real news  publication and reporting on events across campus.</p>
+                    <p>The director  of the website wanted a redesign that gives student journalists more  flexibility to change the layout based on editorial decisions, while  also overhauling the overall design to be cleaner, more modern, and  realistic to implement on the front end and the back end.</p>
+                </div>
+                <a href="#final-designs" class="PrimaryButton">Skip to final designs</a>
+            </div>
+            
+        </header>
+        <section class="CaseStudyMainContent Layout">
+            
+            <!-- RESEARCH -->
+            <div class="CaseStudyPart">
+                <h2>Research</h2>
+
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+                        <h3>Who am I designing for?</h3>
+                        <p>I spoke with some of the key groups of people that use the Newshouse website to find out what problems they have and what changes they want.</p>
+                    </div>
+    
+                    <div class="CardColumn">
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>The website manager</h4>
+                                        <p>A professor who manages both the front end and back end of the site, which can be very time consuming.</p>
+                                    </div>
+                                    <div>
+                                        <h5>Goal</h5>
+                                        <p>To increase site traffic and retention rate with a site that is easy to implement.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Student journalists</h4>
+                                        <p>Journalism students working for this student news website to get real-world journalism experience.</p>
+                                    </div>
+                                    <div>
+                                        <h5>Goal</h5>
+                                        <p>To write, edit, and publish articles on the site without needing technical or design support from other people.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Readers</h4>
+                                        <p>These could be current or prospective students, parents, professors, or members of the Syracuse community..</p>
+                                    </div>
+                                    <div>
+                                        <h5>Goal</h5>
+                                        <p>To quickly find current articles relevant to their interests whenever they visit the site.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+                        <div>
+                            <p class="NormalEyebrow">A primary user journey</p>
+                            <h3>Mobile traffic from social media</h3>
+                        </div>
+                        <p>The website manager said that users often come to the site when they find an interesting article on social media. After being directly linked to and reading that article, they leave the site.</p>
+                    </div>
+                    <div class="ContentCardImage">
+                        <img src="assets/newshouse/process/newshouse-as-is.png" alt="The as-is journey of a mobile visitor to the Newshouse website.">
+                    </div>
+                    <div class="ContentCardImage">
+                        <img src="assets/newshouse/process/newshouse-to-be.png" alt="The to-be journey of a mobile visitor to the Newshouse website.">
+                    </div>
+                </div>
+
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+                        <div>
+                            <h3>Analyzing user behavior from analytics</h3>
+                        </div>
+                        <div class="ContentBlock">
+                            <p>The manager of the Newshouse said that users often come to a specific article on their phone through social media, read it, then leave without going to other articles or a section front.</p>
+                            <p>A pattern I noticed in the analytics data is that the section fronts on desktop have higher page view rankings than their counterparts on mobile.</p>
+                            <p>One of the differences between the desktop and mobile views of the Newshouse is that on mobile, the section front pages are hidden behind a hamburger menu. That made me wonder if the mobile section fronts have lower page view rankings because they are not right in front of the viewer like they are on desktop.</p>
+                        </div>
+                    </div>
+                    <div class="ContentCardImage">
+                        <img src="assets/newshouse/process/newshouse-page-views.png" alt="A table showing how the section front pages have more views compared to individual story pages from desktop viewers compared to mobile viewers.">
+                    </div>
+                </div>
+                
+                
+
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+                        <h3>Potential design opportunities</h3>
+                        <p>After I observed student journalists go through the process of creating and uploading an article to the website, a few things stood out to me.</p>
+                    </div>
+                    
+
+                    <div class="CardColumn">
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>The font size on mobile is the same size as desktop.</h4>
+                                    </div>
+                                    <p>As a result, student journalists sometimes have to change the headline content on mobile to fit — even if they already like the headline!</p>
+                                </div>
+                                <div class="ContentCardImage">
+                                    <img src="assets/newshouse/process/newshouse-phone-mockup.png" alt="Mockup of current Newshouse article title on a phone.">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Articles are given multiple tags for SEO on the back end, but aren’t fully utilized on the front end.</h4>
+                                    </div>
+                                    <p>Since the infrastructure for having article tags already exists, utilizing tags on the front end could help readers discover new articles.</p>
+                                </div>
+                                <div class="ContentCardImage">
+                                    <img src="assets/newshouse/process/newshouse-article-tags.png" alt="Mockup of current Newshouse article cards that only show one tag each.">
+                                </div>
+                            </div>
+                        </div>
+        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+
+
+            <!-- Initial wireframing and testing -->
+            <div class="CaseStudyPart">
+                <h2>Designing and iterating</h2>
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+    
+                        <h3>My wireframe had too many articles</h3>
+                        <p>After showing my wireframe to the website manager, he said there were too many articles, especially with the inclusion of a button that loads more articles. Since the Newshouse only publishes a few articles per week at most, he didn't want there to be lots of older articles on the section fronts.</p>
+    
+                    </div>
+                    <div class="ContentCardImage">
+                                    <img src="assets/newshouse/process/newshouse-sports-section-front-wireframe.png" alt="Wireframe of my section front redesign.">
+                    </div>
+
+                </div>
+
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+    
+                        <h3>Designing different headers for different contexts</h3>
+                        <p>The website manager wanted to implement WordPress blocks on the website so that student journalists could change the layout based on their editorial decisions. I designed various templates for the section page header that student journalists can choose from, depending on the situation.</p>
+    
+                    </div>
+                    <div class="ContentCardImage">
+                        <img src="assets/newshouse/process/newshouse-modular-section-front.png" alt="Modular section front variants.">
+                    </div>
+
+                </div>
+
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+    
+                        <h3>Mobile design optimizations</h3>
+                        <p>Based on the user journey of mobile users coming from social media, reading an article, and then leaving, I redesigned the navigation of the mobile site to not be hidden behind a hamburger menu. This means that users would be more likely to go to a main section page, where they can discover more articles.</p>
+    
+                    </div>
+                    <div class="ContentCardImage">
+                                    <img src="assets/newshouse/process/newshouse-mobile-optimizations.png" alt="Optimizations I made to the mobile version of the Newshouse website.">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Final designs -->
+
+            
+            <div class="CaseStudyPart" id="final-designs">
+                <h2>Final designs</h2>
+                <div class="Slider FullBleed">
+                <div class="SliderButtonGroup">
+                    <button class="SliderPrevButton PrimaryButton" aria-label="Previous slide"><img src="assets/icons/arrow-left.svg" alt=""></button>
+                    <button class="SliderNextButton PrimaryButton" aria-label="Next slide"><img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                <div class="SliderImageContainer">
+                    <div class="SliderImage SlideActive">
+                        <img src="assets/newshouse/new-final/D SportsFront BreakingNews.png" alt="Sports section front when there is breaking news">
+                    </div>
+                    <div class="SliderImage">
+                        <img src="assets/newshouse/new-final/D Story.png" alt="Story page">
+                    </div>
+                    <div class="SliderImage">
+                        <img src="assets/newshouse/new-final/D SearchResults.png" alt="Search results">
+                    </div>
+                    <!-- <div class="SliderImage">
+                        <img src="assets/newshouse/final/D ContributorPage.png" alt="Contributor page">
+                    </div> -->
+                    <div class="SliderImage">
+                        <img src="assets/newshouse/new-final/D SportsFront SpecialProject.png" alt="Section front when there is a special project">
+                    </div>
+                    <div class="SliderImage">
+                        <img src="assets/newshouse/final/D SportsFront Normal.png" alt="Sports section front">
+                    </div>
+                </div>
+                <div class="SliderButtonGroup">
+                    <button class="SliderPrevButton PrimaryButton" aria-label="Previous slide"><img src="assets/icons/arrow-left.svg" alt=""></button>
+                    <button class="SliderNextButton PrimaryButton" aria-label="Next slide"><img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Lessons learned -->
+            <div class="CaseStudyPart">
+                <h2>Lessons learned</h2>
+                <div class="SectionMiniContent">
+            
+                    <div class="CardColumn">
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Working with a client</h4>
+                                    </div>
+                                    <p>This project showed me what it is like to work with a client and the importance of listening to different stakeholders, which in this case included the website manager, student journalists, and site users.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Combining qualitative and quantitative data</h4>
+                                    </div>
+                                    <p>To understand the problems and constraints, I made use of Google Analytics data in addition to talking to users and student journalists. This combination of qualitative and quantitative data helped me create unique insights.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+    
+                    <!-- <div class="CardRow">
+                        <div class="ContentCard">
+                            <h4>Working in a complex domain</h4>
+                            <p>As someone who doesn’t have a lot of background knowledge of government data, I quickly got up to speed on the problems and constraints that would come with making a tool like this.</p>
+                        </div>
+                        <div class="ContentCard">
+                            <h4>Research comes in many forms</h4>
+                            <p>I conducted UX research for this project in some interesting ways, such as searching through Congressional transcripts, analyzing existing interfaces, talking to experts, and reading academic articles to better understand the topic and problems.</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+            <div class="FooterDiv">
+            <span class="FooterMessage">Site designed and coded by me! 😄</span>
+            <div class="FooterLinks">
+                <a href="mailto:alexlevy@columbus.rr.com" class="Email">alexlevy@columbus.rr.com</a>
+                <a href="https://www.linkedin.com/in/alexlevydesign/" target="_blank"><img src="assets/linkedin-logo.svg" class="LinkedinLogo" alt="LinkedIn Logo"></a>
+            </div>
+        </div>
+    
+        
+        
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
