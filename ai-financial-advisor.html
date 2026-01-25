@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Financial Advisor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a id="skip" href="#content">Skip to Content</a>
+    <nav>
+        <div class="NavBar">
+            <div class="NavBarLogo">
+                <a href="index.html">
+                    <img class="NavBarLogoDesktop" src="assets/personal-branding/Lockup-white.svg" alt="Alex Levy">
+                    <img class="NavBarLogoMobile" src="assets/personal-branding/Lockup-blue.svg" alt="Alex Levy">
+                </a>
+            </div>
+            <div class="NavBarLinks">
+                <div class="NavBarLinksChild NavLinkHome NavLinkMargin"><a href="index.html">Home</a></div>
+                <!-- <div class="NavBarLinksChild NavLinkProjects NavLinkMargin"><a href="index.html#Projects">Projects</a></div> -->
+                <!-- <div class="NavBarLinksChild NavLinkContact NavLinkMargin"><a href="index.html#Contact">Contact</a></div> -->
+                <div class="NavBarLinksChild NavLinkAbout"><a href="index.html">UI & UX</a><div></div></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="graphic-design.html">Graphic Design</a><div></div></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="about.html">About</a><div></div></div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="content">
+        <header class="CaseStudyHero">
+            <div class="CaseStudyHeroImage">
+                <img src="assets/project-cards/ai-financial-advisor-thumbnail.png" alt="AI financial advisor mockup.">
+            </div>
+            <div class="CaseStudyHeroText">
+                <h1>Ideating a tool to give AI-powered financial advice</h1>
+                <p>During my IBM internship, I sat in on a workshop with a major financial institution that wanted to explore IBM's generative AI solutions. Many problems and ideas were shared, but one in particular stood out to me: how could generative AI help people who have questions about complex and personal financial situations?</p>
+                <a href="#final-designs" class="PrimaryButton">Skip to final designs</a>
+            </div>
+            
+        </header>
+        <section class="CaseStudyMainContent Layout">
+            
+            <!-- RESEARCH -->
+            <div class="CaseStudyPart">
+                <h2>Research</h2>
+
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+                        <h3>Talking to an expert</h3>
+                        <p>I talked to an expert on the banking industry and did secondary research to understand the user groups along with the problems they have. He said there are four main groups of users but emphasized that there are two groups of people who face the biggest challenges:</p>
+                    </div>
+
+                    <div class="ContentCardImage">
+                        <img src="assets/ai-financial-advisor/process-images/primary-persona.png" alt="Primary persona.">
+                    </div>
+                    <div class="ContentCardImage">
+                        <img src="assets/ai-financial-advisor/process-images/secondary-persona.png" alt="Secondary persona.">
+                    </div>
+                </div>
+
+
+
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+                        <div>
+                            <h3>Researching how people approach financial advice</h3>
+                        </div>
+                        <p>Because this wasn't an official client project, I wasn't given any resources to help me in conducting user research, but that didn't stop me from doing desk research to understand the user groups and potential challenges that they face.</p>
+                    </div>
+
+                    <div class="CardColumn">
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Retirement planning is overwhelming for many</h4>
+                                    </div>
+                                    <p>37% of adults surveyed said they have not done any retirement planning, and 76% of that group says that they find planning for retirement overwhelming. A trusted, accessible source of financial information could help this group start to make a plan.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Many young adults turn to social media</h4>
+                                    </div>
+                                    <p>One article said that 47% of young adult respondents use Reddit for financial information and advice. This stood out to me because users looking for personal financial advice might appreciate the ability to stay anonymous while fostering personal connections.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        
+                    </div>
+
+                </div>
+            </div>
+            
+            
+
+
+            <!-- Designing and iterating -->
+            <div class="CaseStudyPart">
+                <h2>Designing and iterating</h2>
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+    
+                        <h3>Focusing on user problems</h3>
+                        <p>Using the information I learned about the potential users and the financial advising and banking industries, I created some statements to help me focus and solve user problems.</p>
+    
+                    </div>
+
+                    <div class="CardColumn">
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>How might we…</h4>
+                                    </div>
+                                    <p>design a chatbot experience that goes beyond general responses and gives helpful and personalized answers.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>How might we…</h4>
+                                    </div>
+                                    <p>have a non-judgmental experience for users revealing information that they would otherwise be embarrassed to admit.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>How might we…</h4>
+                                    </div>
+                                    <p>keep the user engaged in the process of reaching their financial goals for an extended period of time.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+
+                </div>
+
+                <div class="SectionMiniContent">
+                    <div class="ContentBlock">
+    
+                        <h3>Iterations</h3>
+                        <!-- <p>The website manager wanted to implement WordPress blocks on the website so that student journalists could change the layout based on their editorial decisions. I designed various templates for the section page header that student journalists can choose from, depending on the situation.</p> -->
+    
+                    </div>
+
+                    <div class="ContentCard">
+                    <div class="ContentCardText">
+                        <div class="ContentCardTextHeader">
+                            <div>
+                                <p class="NormalEyebrow">Prompt input</p>
+                                <h4>Helping a user put their financial situation into words</h4>
+                            </div>
+                            <!-- <p class="BodyLarge">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, soluta praesentium quod recusandae maiores ut necessitatibus cum odio, expedita, libero repellendus! Vero numquam, soluta accusantium provident atque maiores commodi eligendi!</p> -->
+                        </div>
+    
+                        <div class="ContentCardTextBody">
+                            <div>
+                                <h5>Version 1</h5>
+                                <p>To help the user to get the personalized answers they are looking for, I designed a feature that allows them to assign an importance level to specific parts of their question for the AI to focus on.</p>
+                            </div>
+                            <div>
+                                <h5>Version 2</h5>
+                                <p>I realized that people might have trouble explicitly quantifying the importance of parts of their question, so I redesigned the prompt field. Keeping in mind the goal of allowing users to get personalized answers, I used checkboxes with preset options that still gives the chatbot focused context.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div  class="ContentCardImage">
+                        <img src="assets/ai-financial-advisor/process-images/Cropped-chatbot-v1.png" alt="Iterations of the prompt input screen.">
+                    </div>
+                    </div>
+
+                    <div class="ContentCard">
+                    <div class="ContentCardText">
+                        <div class="ContentCardTextHeader">
+                            <div>
+                                <p class="NormalEyebrow">Chat experience</p>
+                                <h4>Giving useful and actionable information</h4>
+                            </div>
+                            <!-- <p class="BodyLarge">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, soluta praesentium quod recusandae maiores ut necessitatibus cum odio, expedita, libero repellendus! Vero numquam, soluta accusantium provident atque maiores commodi eligendi!</p> -->
+                        </div>
+    
+                        <div class="ContentCardTextBody">
+                            <div>
+                                <h5>Version 1</h5>
+                                <p>My first version of the chatbot answer was similar to what other chatbots look like. But then I thought back to how to achieve the unique value proposition of giving personalized financial advice while also directing users to relevant bank services.</p>
+                            </div>
+                            <div>
+                                <h5>Version 2</h5>
+                                <p>Instead of having the chatbot return a paragraph of text like existing chatbots already do, I decided to split the response up into three categories, helping the user easily understand the information. This also provides an opportunity to direct the user towards bank services that they might not know about.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div  class="ContentCardImage">
+                        <img src="assets/ai-financial-advisor/process-images/Cropped-chatbot-v2.png" alt="Iterations of the chatbot answers.">
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Final designs -->
+
+            
+            <div class="CaseStudyPart" id="final-designs">
+                <h2>Final designs</h2>
+                <div class="Slider FullBleed">
+                <div class="SliderButtonGroup">
+                    <button class="SliderPrevButton PrimaryButton" aria-label="Previous slide"><img src="assets/icons/arrow-left.svg" alt=""></button>
+                    <button class="SliderNextButton PrimaryButton" aria-label="Next slide"><img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                <div class="SliderImageContainer">
+                    <div class="SliderImage SlideActive">
+                        <img src="assets/ai-financial-advisor/final-screens/ChatbotHome.png" alt="AI financial advisor home page.">
+                    </div>
+                    <div class="SliderImage">
+                        <img src="assets/ai-financial-advisor/final-screens/ChatbotConversation Revised.png" alt="Chatbot conversation page.">
+                    </div>
+                    <div class="SliderImage">
+                        <img src="assets/ai-financial-advisor/final-screens/ChatbotModalScreenRevised.png" alt="Chatbot create goal modal.">
+                    </div>
+                    <div class="SliderImage">
+                        <img src="assets/ai-financial-advisor/final-screens/Dashboard.png" alt="Dashboard page.">
+                    </div>
+                </div>
+                <div class="SliderButtonGroup">
+                    <button class="SliderPrevButton PrimaryButton" aria-label="Previous slide"><img src="assets/icons/arrow-left.svg" alt=""></button>
+                    <button class="SliderNextButton PrimaryButton" aria-label="Next slide"><img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Lessons learned -->
+            <div class="CaseStudyPart">
+                <h2>Lessons learned</h2>
+                <div class="SectionMiniContent">
+            
+                    <div class="CardColumn">
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Think about the user and business value</h4>
+                                    </div>
+                                    <p>A mentor encouraged me to consider not only the user value, but also the business value. I started to think about this project in terms of how improving the financial planning experience of a bank's account holders will ultimately help the bank build customer loyalty and promote bank services.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="ContentCard">
+                            <div class="ContentCardText">
+                                <div class="ContentCardTextHeader">
+                                    <div>
+                                        <h4>Work within a design system</h4>
+                                    </div>
+                                    <p>By using IBM's design system, Carbon, for this project, I learned best practices for designing experiences using an existing design system. At first, I tended to detach components a lot, which is not the best practice. As the project went on, I learned the importance of using the existing components properly in order to make the design and eventual development process smoother, faster, and more consistent.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+    
+                    <!-- <div class="CardRow">
+                        <div class="ContentCard">
+                            <h4>Working in a complex domain</h4>
+                            <p>As someone who doesn’t have a lot of background knowledge of government data, I quickly got up to speed on the problems and constraints that would come with making a tool like this.</p>
+                        </div>
+                        <div class="ContentCard">
+                            <h4>Research comes in many forms</h4>
+                            <p>I conducted UX research for this project in some interesting ways, such as searching through Congressional transcripts, analyzing existing interfaces, talking to experts, and reading academic articles to better understand the topic and problems.</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- More projects section -->
+
+        <section class="Layout Wide" id="Projects" >
+            <h2>More projects</h2>
+            <div class="ProjectsSection">
+                
+            </div>
+
+            <a href="government-data-finder.html" class="ProjectCard">
+                <div class="ProjectCardText">
+                    <div>
+                        <!-- <div class="TagsContainer">
+                            <p class="ProjectTag">UX Design</p>
+                            <p class="ProjectTag">User Research</p>
+                            <p class="ProjectTag">Visual Design</p>
+                        </div> -->
+                        <h3><span class="ProjectCardBoldBlue">Designing a tool to help students and professionals find government data</span> while maintaining good data practices</h3>
+                    </div>
+                    <button href="government-data-finder.html" class="PrimaryButton">View project <img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                <div class="ProjectCardImage">
+                    <img src="assets/project-cards/gov-data-finder-thumbnail.png" alt="Government Data Finder mockup">
+                </div>
+            </a>
+
+            <a href="the-newshouse-redesign.html" class="ProjectCard">
+                <div class="ProjectCardText">
+                    <div>
+                        <!-- <div class="TagsContainer">
+                            <p class="ProjectTag">UX Design</p>
+                            <p class="ProjectTag">User Research</p>
+                            <p class="ProjectTag">Visual Design</p>
+                        </div> -->
+                        <h3><span class="ProjectCardBoldBlue">Redesigning a student news website</span> with a focus on creating a modular layout</h3>
+                    </div>
+                    <button href="the-newshouse-redesign.html" class="PrimaryButton">View project <img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                <div class="ProjectCardImage">
+                    <img src="assets/project-cards/newshouse-thumbnail.png" alt="Newshouse website redesign mockup">
+                </div>
+            </a>
+
+            <a href="coding-by-design.html" class="ProjectCard">
+                <div class="ProjectCardText">
+                    <div>
+                        <!-- <div class="TagsContainer">
+                            <p class="ProjectTag">UX Design</p>
+                            <p class="ProjectTag">User Research</p>
+                            <p class="ProjectTag">Visual Design</p>
+                        </div> -->
+                        <h3><span class="ProjectCardBoldBlue">Helping designers learn web development</span> through the process of building their personal portfolio site</h3>
+                    </div>
+                    <button href="coding-by-design.html" class="PrimaryButton">View project <img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                <div class="ProjectCardImage">
+                    <img src="assets/project-cards/coding-by-design-thumbnail.png" alt="Coding by Design mockup">
+                </div>
+            </a>
+
+            <a href="ai-financial-advisor.html" class="ProjectCard">
+                <div class="ProjectCardText">
+                    <div>
+                        <!-- <div class="TagsContainer">
+                            <p class="ProjectTag">UX Design</p>
+                            <p class="ProjectTag">User Research</p>
+                            <p class="ProjectTag">Visual Design</p>
+                        </div> -->
+                        <h3><span class="ProjectCardBoldBlue">Ideating a tool to give people AI-powered financial advice</span> as team leader of an internal hackathon project</h3>
+                    </div>
+                    <button href="ai-financial-advisor.html" class="PrimaryButton">View project <img src="assets/icons/arrow-right.svg" alt=""></button>
+                </div>
+                <div class="ProjectCardImage">
+                    <img src="assets/project-cards/ai-financial-advisor-thumbnail.png" alt="AI Financial Advisor mockup">
+                </div>
+            </a>
+
+            
+        </section>
+
+
+    </main>
+
+    <footer>
+            <div class="FooterDiv">
+            <span class="FooterMessage">Site designed and coded by me! 😄</span>
+            <div class="FooterLinks">
+                <a href="mailto:alexlevy@columbus.rr.com" class="Email">alexlevy@columbus.rr.com</a>
+                <a href="https://www.linkedin.com/in/alexlevydesign/" target="_blank"><img src="assets/linkedin-logo.svg" class="LinkedinLogo" alt="LinkedIn Logo"></a>
+            </div>
+        </div>
+    
+        
+        
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
