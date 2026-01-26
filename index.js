@@ -39,13 +39,24 @@ const projectCards = document.querySelectorAll(".ProjectCard");
 
 projectCards.forEach(card => {
   card.addEventListener("mouseenter", () => {
+    let animationFrameId = null;
+    
     const mouseMoveHandler = (e) => {
-      card.style.setProperty("--x", `${e.x}px`);
-      card.style.setProperty("--y", `${e.y}px`);
+      if (animationFrameId) return;
+      
+      animationFrameId = requestAnimationFrame(() => {
+        card.style.setProperty("--x", `${e.x}px`);
+        card.style.setProperty("--y", `${e.y}px`);
+        animationFrameId = null;
+      });
     };
+    
     document.addEventListener("mousemove", mouseMoveHandler);
 
     card.addEventListener("mouseleave", () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
       document.removeEventListener("mousemove", mouseMoveHandler);
     }, { once: true });
   });
