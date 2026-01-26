@@ -823,16 +823,21 @@ p:has(.HeroMainSubHeading) {
     }
 }
 
-.VisualDesign {
+
+.UXDesign {
     font-weight: 700;
+    color: #2156a6;
+}
+.VisualDesign {
+    font-weight: 500;
     color: #4921A6;
 }
 .UserResearch {
-    font-weight: 700;
+    font-weight: 500;
     color: #9621A6;
 }
 .FrontEndDev {
-    font-weight: 700;
+    font-weight: 00;
     color: #A62137;
     text-wrap: pretty;
 }
