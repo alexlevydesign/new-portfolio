@@ -1634,6 +1634,38 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.40);
     object-fit: cover;
 }
 
+.ShowFullImage > * {
+    height: fit-content;
+    overflow: unset !important;
+}
+
+.ShowFullImage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.GridImageContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+.ColumnImageContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.GridImage img, .GridImage video {
+    max-width: 100%;
+}
+.GridImage {
+
+}
+
 .SliderButtonGroup {
     display: flex;
     gap: 1rem;
