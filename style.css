@@ -563,7 +563,7 @@ h1 {
     padding-bottom: 4px; */
     /* margin-right: 10%; */
     margin-top: 0;
-    line-height: 115%;
+    line-height: 130%;
     widows: 1;
     /* padding-right: 0 !important; */
     color: #2156a6;
@@ -768,6 +768,7 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
     }
     h1 {
         font-size: 3rem;
+        line-height: 125%;
     }
     .HeroHomeIntro h1 {
         padding-right: 0 !important;
