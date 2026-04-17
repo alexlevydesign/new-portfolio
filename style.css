@@ -592,14 +592,15 @@ h2 {
     font-size: 2.7rem;
     font-weight: 600;
     color: #2156a6;
-    line-height: 115%;
+    line-height: 120%;
     /* letter-spacing: .03em; */
 
 }
 h3 {
-    font-size: 2.25rem;
-    font-weight: 400;
-    line-height: 135%;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 130%;
+    color: #1a1a2e;
 }
 h4, .Heading4, .LargeSubheading {
     font-size: 1.5rem;
@@ -615,7 +616,7 @@ h5, .SmallSubheading {
     font-weight: 600;
 }
 p, .ParagraphGap ul, li {
-    line-height: 140%;
+    line-height: 160%;
     font-size: 1.1rem;
 }
 .LightH1 {
@@ -628,10 +629,10 @@ p, .ParagraphGap ul, li {
 }
 
 :is(.ParentColumn) > h3 + p, :is(.ParentColumn) > h4 + p, :is(.ParentColumn) > h3 + img, :is(.ParentColumn) > h4 + img {
-    margin-top: -1rem; /* this takes the value of the gap property of the class .ParentColumn and subtracts the value applied in this margin-top property. This property needs to be negative, and the result the equation [.ParentColumn {gap: x}] + [:is(.ParentColumn) > h3 + p, :is(.ParentColumn) > h4 + p] should ALWAYS equal the value of margin-top within the selector h3 + p, h4 + p. */
+    margin-top: -1rem; /* this takes the value of the gap property of the class .ParentColumn and subtracts the value applied in this margin-top property. This property needs to be negative, and the result the equation [.ParentColumn {gap: x}] + [:is(.ParentColumn) > h3 + p, :is(.ParentColumn) > h4 + p] should ALWAYS equal the value of margin-top within the selector h3 + p. */
 }
-h3 + p, h4 + p {
-    /* margin-top: 1rem; */
+h3 + p {
+    margin-top: 0.375rem;
 }
 h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
     margin-top: .25rem;
@@ -790,7 +791,7 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
         font-size: 1.9rem;
     }
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
     h4 {
         font-size: 1.3rem;
@@ -1208,7 +1209,7 @@ form .Row {
 .ContentBlock {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .75rem;
 }
 .SectionMiniContent {
     display: flex;
@@ -1321,6 +1322,7 @@ form .Row {
 }
 .ContentCard h4 {
     height: unset;
+    font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 1200px) {
