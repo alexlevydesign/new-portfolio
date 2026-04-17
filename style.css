@@ -589,7 +589,7 @@ h1 {
 }
 h2 {
     font-family: 'Lora', 'Montserrat', Verdana, sans-serif;
-    font-size: 2.7rem;
+    font-size: 2.8rem;
     font-weight: 600;
     color: #2156a6;
     line-height: 115%;
@@ -597,12 +597,12 @@ h2 {
 
 }
 h3 {
-    font-size: 2.25rem;
+    font-size: 2.35rem;
     font-weight: 400;
     line-height: 135%;
 }
 h4, .Heading4, .LargeSubheading {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 /* .H4Large {
