@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Styles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        .TypeStylesPage {
+            max-width: 48rem;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .TypeRow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 2rem;
+            align-items: start;
+            padding: 2rem 0;
+            border-bottom: 1px solid #d0d0d0;
+        }
+        .TypeRow:last-child {
+            border-bottom: none;
+        }
+        .TypeSample {
+            min-width: 0;
+        }
+        .TypeMeta {
+            display: flex;
+            flex-direction: column;
+            gap: .35rem;
+            padding-top: .25rem;
+        }
+        .TypeLabel {
+            font-size: .75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #888;
+        }
+        .TypeProp {
+            font-size: .85rem;
+            font-weight: 400;
+            color: #444;
+            line-height: 1.5;
+            font-family: 'Montserrat', Verdana, sans-serif;
+        }
+        .TypeProp code {
+            font-family: monospace;
+            background: #e4e4e4;
+            padding: 0 .3em;
+            border-radius: 3px;
+            font-size: .8rem;
+        }
+        .PageIntro {
+            padding: 2.5rem 0 2rem;
+            border-bottom: 2px solid #2156a6;
+            margin-bottom: .5rem;
+        }
+        .PageIntro h1 {
+            font-size: 1.75rem;
+            font-family: 'Montserrat', Verdana, sans-serif;
+            font-weight: 700;
+            color: #2156a6;
+            line-height: 120%;
+            text-align: left !important;
+        }
+        .PageIntro p {
+            font-size: 1rem;
+            color: #555;
+            margin-top: .5rem;
+            line-height: 150%;
+        }
+        .SectionDivider {
+            font-size: .7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #aaa;
+            padding: 1.5rem 0 .25rem;
+        }
+    </style>
+</head>
+<body>
+    <a id="skip" href="#content">Skip to Content</a>
+    <nav>
+        <div class="NavBar">
+            <div class="NavBarLogo">
+                <a href="index.html">
+                    <img class="NavBarLogoDesktop" src="assets/personal-branding/Lockup-white.svg" alt="Alex Levy">
+                    <img class="NavBarLogoMobile" src="assets/personal-branding/Lockup-blue.svg" alt="Alex Levy">
+                </a>
+            </div>
+            <div class="NavBarLinks">
+                <div class="NavBarLinksChild NavLinkHome NavLinkMargin"><a href="index.html">Home</a></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="index.html">UI & UX</a><div></div></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="graphic-design.html">Graphic Design</a><div></div></div>
+                <div class="NavBarLinksChild NavLinkAbout"><a href="about.html">About</a><div></div></div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div class="TypeStylesPage">
+
+            <div class="PageIntro">
+                <h1>Type Styles</h1>
+                <p>All type styles defined in <code style="font-family:monospace;background:#e4e4e4;padding:0 .3em;border-radius:3px;">style.css</code>, shown with their key properties.</p>
+            </div>
+
+            <!-- ── HEADINGS ─────────────────────────────────────── -->
+            <p class="SectionDivider">Headings</p>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <h1>Heading 1</h1>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">h1</span>
+                    <span class="TypeProp">font-family: <code>Lora</code></span>
+                    <span class="TypeProp">font-size: <code>3rem</code></span>
+                    <span class="TypeProp">font-weight: <code>700</code></span>
+                    <span class="TypeProp">line-height: <code>130%</code></span>
+                    <span class="TypeProp">color: <code>#2156a6</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <h2>Heading 2</h2>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">h2</span>
+                    <span class="TypeProp">font-family: <code>Lora</code></span>
+                    <span class="TypeProp">font-size: <code>2.8rem</code></span>
+                    <span class="TypeProp">font-weight: <code>600</code></span>
+                    <span class="TypeProp">line-height: <code>115%</code></span>
+                    <span class="TypeProp">color: <code>#2156a6</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <h3>Heading 3</h3>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">h3</span>
+                    <span class="TypeProp">font-family: <code>Montserrat</code></span>
+                    <span class="TypeProp">font-size: <code>2.35rem</code></span>
+                    <span class="TypeProp">font-weight: <code>400</code></span>
+                    <span class="TypeProp">line-height: <code>135%</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <h4>Heading 4</h4>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">h4 / .Heading4 / .LargeSubheading</span>
+                    <span class="TypeProp">font-family: <code>Montserrat</code></span>
+                    <span class="TypeProp">font-size: <code>1.4rem</code></span>
+                    <span class="TypeProp">font-weight: <code>600</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <h5>Heading 5</h5>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">h5 / .SmallSubheading</span>
+                    <span class="TypeProp">font-family: <code>Montserrat</code></span>
+                    <span class="TypeProp">font-size: <code>1.1rem</code></span>
+                    <span class="TypeProp">font-weight: <code>600</code></span>
+                    <span class="TypeProp">line-height: <code>130%</code></span>
+                </div>
+            </div>
+
+            <!-- ── BODY TEXT ────────────────────────────────────── -->
+            <p class="SectionDivider">Body Text</p>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p>Body paragraph text. The quick brown fox jumps over the lazy dog.</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">p / li</span>
+                    <span class="TypeProp">font-family: <code>Montserrat</code></span>
+                    <span class="TypeProp">font-size: <code>1.1rem</code></span>
+                    <span class="TypeProp">line-height: <code>140%</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p class="BodyLarge">Body large. The quick brown fox jumps over the lazy dog.</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.BodyLarge</span>
+                    <span class="TypeProp">font-size: <code>1.5rem</code></span>
+                    <span class="TypeProp">font-weight: <code>300</code></span>
+                    <span class="TypeProp">line-height: <code>130%</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p class="BodySmall">Body small. The quick brown fox jumps over the lazy dog.</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.BodySmall</span>
+                    <span class="TypeProp">font-size: <code>1rem</code></span>
+                    <span class="TypeProp">font-weight: <code>300</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p>This sentence contains <b>bold text</b> within it.</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">b</span>
+                    <span class="TypeProp">font-weight: <code>600</code></span>
+                </div>
+            </div>
+
+            <!-- ── LABELS & EYEBROWS ───────────────────────────── -->
+            <p class="SectionDivider">Labels &amp; Eyebrows</p>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p class="H1Eyebrow">H1 Eyebrow Label</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.H1Eyebrow</span>
+                    <span class="TypeProp">font-size: <code>1.3rem</code></span>
+                    <span class="TypeProp">text-transform: <code>uppercase</code></span>
+                    <span class="TypeProp">letter-spacing: <code>1px</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p class="NormalEyebrow">Normal Eyebrow</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.NormalEyebrow</span>
+                    <span class="TypeProp">font-size: <code>1rem</code></span>
+                    <span class="TypeProp">font-weight: <code>600</code></span>
+                    <span class="TypeProp">text-transform: <code>uppercase</code></span>
+                    <span class="TypeProp">color: <code>#2156a6</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p class="ProjectTag">Project Tag</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.ProjectTag</span>
+                    <span class="TypeProp">font-size: <code>1rem</code></span>
+                    <span class="TypeProp">font-weight: <code>300</code></span>
+                    <span class="TypeProp">text-transform: <code>uppercase</code></span>
+                    <span class="TypeProp">letter-spacing: <code>1px</code></span>
+                </div>
+            </div>
+
+            <!-- ── H1 VARIANTS ─────────────────────────────────── -->
+            <p class="SectionDivider">H1 Variants</p>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <h1 class="LightH1">Light H1</h1>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">h1.LightH1</span>
+                    <span class="TypeProp">font-weight: <code>300</code></span>
+                    <span class="TypeProp">text-transform: <code>uppercase</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <h1 class="HeavyH1">Heavy H1</h1>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">h1.HeavyH1</span>
+                    <span class="TypeProp">font-weight: <code>600</code></span>
+                    <span class="TypeProp">text-transform: <code>uppercase</code></span>
+                </div>
+            </div>
+
+            <!-- ── SPECIAL STYLES ──────────────────────────────── -->
+            <p class="SectionDivider">Special Styles</p>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p class="HeroMainSubHeading">Hero Main Subheading</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.HeroMainSubHeading</span>
+                    <span class="TypeProp">font-size: <code>1.5rem</code></span>
+                    <span class="TypeProp">font-weight: <code>500</code></span>
+                    <span class="TypeProp">color: <code>#000</code></span>
+                    <span class="TypeProp">line-height: <code>140%</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p class="SmallH2">Small H2</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.SmallH2</span>
+                    <span class="TypeProp">font-size: <code>1.5rem</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p class="QuoteAttribution">— Quote Attribution</p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.QuoteAttribution</span>
+                    <span class="TypeProp">font-size: <code>1.1rem</code></span>
+                    <span class="TypeProp">font-weight: <code>500</code></span>
+                    <span class="TypeProp">line-height: <code>130%</code></span>
+                    <span class="TypeProp">color: <code>#2156a6</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p><span class="ProjectCardBoldBlue">Project Card Bold Blue</span></p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.ProjectCardBoldBlue</span>
+                    <span class="TypeProp">font-weight: <code>600</code></span>
+                    <span class="TypeProp">color: <code>#2156a6</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <p class="ProjectCardText"><h3>Project Card Text h3</h3></p>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.ProjectCardText h3</span>
+                    <span class="TypeProp">font-size: <code>1.75rem</code></span>
+                    <span class="TypeProp">font-weight: <code>400</code></span>
+                    <span class="TypeProp">line-height: <code>130%</code></span>
+                </div>
+            </div>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <a href="#" class="Link">Link Style</a>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.Link</span>
+                    <span class="TypeProp">font-weight: <code>600</code></span>
+                    <span class="TypeProp">color: <code>#2156a6</code></span>
+                </div>
+            </div>
+
+            <!-- ── NAVIGATION ──────────────────────────────────── -->
+            <p class="SectionDivider">Navigation</p>
+
+            <div class="TypeRow">
+                <div class="TypeSample">
+                    <span style="font-weight:700;font-size:1.125rem;font-family:'Montserrat',Verdana,sans-serif;color:#2156a6;">Nav Bar Link</span>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.NavBarLinks</span>
+                    <span class="TypeProp">font-size: <code>1.125rem</code></span>
+                    <span class="TypeProp">font-weight: <code>700</code></span>
+                    <span class="TypeProp">text-decoration: <code>none</code></span>
+                    <span class="TypeProp">color: <code>#2156a6</code></span>
+                </div>
+            </div>
+
+            <!-- ── BUTTONS ─────────────────────────────────────── -->
+            <p class="SectionDivider">Buttons</p>
+
+            <div class="TypeRow">
+                <div class="TypeSample" style="display:flex;flex-direction:column;gap:.75rem;align-items:flex-start;">
+                    <a href="#" class="PrimaryButton">Primary Button</a>
+                    <a href="#" class="SecondaryButton">Secondary Button</a>
+                    <a href="#" class="GhostButton">Ghost Button</a>
+                </div>
+                <div class="TypeMeta">
+                    <span class="TypeLabel">.PrimaryButton / .SecondaryButton / .GhostButton</span>
+                    <span class="TypeProp">font-size: <code>1rem</code></span>
+                    <span class="TypeProp">font-weight: <code>600</code></span>
+                    <span class="TypeProp">text-decoration: <code>none</code></span>
+                    <span class="TypeProp">text-align: <code>center</code></span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="FooterDiv">
+            <span class="FooterMessage">Site designed and coded by me! 😄</span>
+            <div class="FooterLinks">
+                <a href="mailto:alexlevy@columbus.rr.com" class="Email">alexlevy@columbus.rr.com</a>
+                <a href="https://www.linkedin.com/in/alexlevydesign/" target="_blank"><img src="assets/linkedin-logo.svg" class="LinkedinLogo" alt="LinkedIn Logo"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
