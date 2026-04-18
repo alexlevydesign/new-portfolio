@@ -422,17 +422,39 @@ nav {
     font-size: 1.125rem;
     display: flex;
     gap: 3rem;
+    margin-top: .25rem;
 }
 .NavBarLinks a:link, .NavBarLinks a:visited, .NavBarLinks a:hover, .NavBarLinks a:active {
     text-decoration: none;
 }
-.NavBarLinks a:link, .NavBarLinks a:visited {
+/* .NavBarLinks a:link, .NavBarLinks a:visited {
     color: #2156a6;
 }
-.NavBarLinks a:hover, .NavBarLinks a:active {
+.NavBarLinks a:hover, .NavBarLinks a:active, .CurrentPage div:hover {
     color: #00005e;
-    /* text-decoration: underline; */
+} */
+
+.NavBarLinksChild a  {
+    color: #2156a6;
 }
+.NavBarLinksChild div {
+    background-color: #2156a6;
+}
+.NavBarLinksChild:hover a  {
+    color: #00005e;
+    transition: .1s ease-in-out;
+}
+.NavBarLinksChild:hover div {
+    background-color: #00005e;
+    transition: .1s ease-in-out;
+}
+
+
+
+
+
+
+
 .NavBarLinksChild {
     /* display: inline;
     padding-left: 100px; */
@@ -440,8 +462,9 @@ nav {
 }
 .CurrentPage {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     position: relative;
+    gap: .25rem;
 }
 .CurrentPage a {
     /* color: #00005e !important; */
@@ -451,12 +474,15 @@ nav {
 }
 .CurrentPage div {
     /* content: ''; */
-    position:absolute;
+    position:relative;
     height: .25rem;
-    top: 1.5rem;
+    /* top: 1.5rem; */
     width: 100%;
     background-color: #2156a6;
+
+
 }
+
 /* .CurrentPage::after{
     content:'';
     height: 2px;
@@ -656,9 +682,18 @@ h4 + p, .Heading4 + p, .Heading4 + .ParagraphGap {
     font-size: 1rem;
     color: #2156a6;
 }
-.Link, .Link:visited {
+a.Link, a.Link:visited {
     color: #2156a6;
-    font-weight: 600;
+    font-weight: 400;
+}
+a.Link:hover {
+    color: #00005e;
+    transition: .1s ease-in-out;
+    font-weight: 400;
+}
+a.Link:active {
+    color: #00005e;
+    font-weight: 400;
 }
 .SmallH2 {
     font-size: 1.5rem;
