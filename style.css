@@ -619,18 +619,19 @@ h2 {
     font-size: 2.8rem;
     font-weight: 600;
     color: #2156a6;
-    line-height: 115%;
+    line-height: 130%;
     /* letter-spacing: .03em; */
 
 }
 h3 {
     font-size: 2.35rem;
     font-weight: 400;
-    line-height: 135%;
+    line-height: 130%;
 }
 h4, .Heading4, .LargeSubheading {
     font-size: 1.4rem;
     font-weight: 600;
+    line-height: 130%;
 }
 /* .H4Large {
     font-size: 1.25rem;
