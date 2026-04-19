@@ -1336,6 +1336,9 @@ form .Row {
 .ContentCardImage {
     /* padding: 1rem; */
 }
+.FullBleedImage {
+    margin-left: -1rem;
+}
 .ContentCardImage img, .ContentCard video {
     max-width: 100%;
 }
