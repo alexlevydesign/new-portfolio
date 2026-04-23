@@ -646,6 +646,7 @@ h5, .SmallSubheading {
     font-size: 1.1rem;
     line-height: 130%;
     font-weight: 600;
+    color: #4E4E4E
 }
 p, .ParagraphGap ul, li {
     line-height: 140%;
@@ -1123,7 +1124,7 @@ box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.25);
 
 /* #region CONTACT SECTION */
 label {
-    color: #626262;
+    color: #4E4E4E;
     font-size: .875rem;
     text-transform: uppercase;
 }
@@ -1136,7 +1137,7 @@ label {
 .ContactForm input[type="text"] {
     min-height: 2rem;
     border-radius: .5rem;
-    border: 1px #626262 solid;
+    border: 1px #4E4E4E solid;
     padding-left: .5rem;
     font-size: 1rem;
     padding-top: .25rem;
@@ -1150,7 +1151,7 @@ label {
 }
 .FormMessageDiv textarea {
     min-height: 8rem;
-    border: 1px #626262 solid;
+    border: 1px #4E4E4E solid;
     border-radius: .5rem;
     padding-left: .5rem;
     font-size: 1rem;
