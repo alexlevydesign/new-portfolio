@@ -51,6 +51,9 @@ main {
     /* padding: 0; */
     /* align-self: center; */
 }
+.NoPaddingRight {
+    padding-right: 0;
+}
 /* .Layout > * {
   grid-column: 2;
   width: 100%;
@@ -149,6 +152,11 @@ button img {
     background-color: #2156a6;
     transition: .1s ease-in-out;
 }
+
+.PrimaryButton:hover, .SecondaryButton:hover, .GhostButton:hover {
+    cursor: pointer;
+}
+
 #skip {
     background-color: #fff;
     border: 1px solid black;
