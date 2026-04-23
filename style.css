@@ -1243,7 +1243,7 @@ form .Row {
 .CaseStudyPart {
     display: flex;
     flex-direction: column;
-    gap: 1.75rem;
+    gap: 2rem;
     width: clamp(30rem, 50vw, 60rem);
     align-self: center;
 }
