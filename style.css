@@ -911,10 +911,10 @@ p:has(.HeroMainSubHeading) {
 
 /* #region PROJECT CARDS */
 
-.GraphicDesignProjects .ProjectCardImage :first-child {
+/* .GraphicDesignProjects .ProjectCardImage :first-child {
     max-height: 80%;
     padding-bottom: 2rem;
-}
+} */
 .GraphicDesignProjects .ProjectCard {
     /* align-items: center; */
 }
