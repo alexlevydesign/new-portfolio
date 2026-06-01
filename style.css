@@ -255,7 +255,13 @@ button img {
         padding-right: 1.7rem !important;
     }
 }
+@media only screen and (max-width: 600px) { 
 
+    .GraphicDesignProjects.wide {
+        padding: 0 !important;
+    }
+
+}
 @media only screen and (max-width: 600px) {
     /* .SectionPadding, .SectionPaddingLeftOnly, .Layout {
         padding-left: 2rem !important;
