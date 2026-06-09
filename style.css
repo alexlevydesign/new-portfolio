@@ -353,6 +353,10 @@ button img {
     /* .Wide {
         width: 90vw !important;
     } */
+
+    .CaseStudyHero {
+        padding: 2rem 10vw !important;
+    }
 }
 
 @media only screen and (max-width: 850px) {
@@ -1253,20 +1257,27 @@ form .Row {
 
 .CaseStudyHero {
     margin-bottom: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    /* padding-top: 2rem;
+    padding-bottom: 2rem; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
+    /* gap: 4rem; */
+    gap: 2rem;
     overflow: hidden;
     background: rgba( 233, 233, 233, 0.75);
     box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.25);
     backdrop-filter: blur( 26.5px );
     -webkit-backdrop-filter: blur( 26.5px);
-    padding: 2rem 10vw !important;
-  align-self: center;
+    /* padding: 2rem 10vw !important; */
+    /* padding: 0rem 10vw !important; */
+    align-self: center;
+    align-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
 }
 .CaseStudyHeroText h1 {
     width: 100%;
@@ -1280,9 +1291,10 @@ form .Row {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    text-wrap: balance;
+    /* text-wrap: balance; */
     /* padding-top: 2rem;
     padding-bottom: 2rem; */
+    
     
 }
 
@@ -1301,7 +1313,7 @@ form .Row {
     width: 100%;
 }
 .CaseStudyHeroImage img {
-    max-width: 32rem; /* slightly wider than container */
+    max-width: 40rem; /* slightly wider than container */
     height: auto;
     object-fit: cover;
     height: 100%;
