@@ -176,6 +176,10 @@ button img {
     text-wrap: balance;
     width: fit-content;
 }
+
+.PrimaryButton:focus-visible {
+    outline: 6px #2156a6 double;
+}
 .SecondaryButton {
     border: 2px solid #2156a6;
     background-color: #fff;
@@ -294,6 +298,9 @@ button img {
     margin-top: 2rem;
     margin-bottom: 2rem;
     gap: 1.5rem;
+}
+a:focus-visible {
+    outline: 2px solid #2156a6;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -454,6 +461,9 @@ display: block;
 }
 .NavBarLogoDesktop {
     display: block;
+}
+.NavBarLogoDesktop:focus-visible {
+    outline: 6px #2156a6 double;
 }
 .NavBarLogoMobile {
     display: none;
@@ -1111,12 +1121,14 @@ transition: .3s ease-in-out;
 box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.9);
 transition: .01s ease-in-out;
 /* border: #2156a6 1px solid inset; */
-outline: #2156a6 1px solid;
-
-
-
-    
+outline: #2156a6 2px solid;
+ 
 }
+
+.ProjectCardText .PrimaryButton {
+    display: none;
+}
+
 /* .ProjectCard::after {
     content: "";
     position: absolute;
@@ -1234,6 +1246,10 @@ label {
     padding-top: .5rem;
     resize: vertical;
 
+}
+
+input:focus-visible, textarea:focus-visible {
+    outline: #2156a6 solid 2px;
 }
 form .Row {
     gap: .75rem;
@@ -1589,7 +1605,7 @@ form .Row {
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* width: 80vw !important; */
     /* align-self: center; */
     /* background: rgba( 233, 233, 233, 0.75);
