@@ -1425,6 +1425,7 @@ form .Row {
         padding: 1rem;
         background-color: #ffffff;
         border-radius: 1.5rem;
+        overflow: hidden;
         /* width: 100%; */
     }
     .ContentCardText {
@@ -1448,6 +1449,9 @@ form .Row {
 }
 .FullBleedImage {
     margin-left: -1rem;
+}
+.FullBleedImage img, .FullBleedImage video {
+    border-radius: 0;
 }
 .ContentCardImage img, .ContentCard video {
     max-width: 100%;
