@@ -1278,7 +1278,7 @@ form .Row {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     /* gap: 4rem; */
     gap: 4rem;
     overflow: hidden;
@@ -1302,7 +1302,7 @@ form .Row {
     /* text-wrap: unset !important; */
 }
 .CaseStudyHeroText {
-    /* flex: 1; */
+    flex: 1 1 0;
     min-width: 0; /* prevents flex item from overflowing */
     display: flex;
     flex-direction: column;
@@ -1316,7 +1316,8 @@ form .Row {
 
 
 .CaseStudyHeroImage {
-    /* flex: 1; */
+    flex: 0 0 50%;
+    min-width: 0;
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -1327,12 +1328,13 @@ form .Row {
     flex-direction: column;
     gap: .5rem;
     width: 100%;
+    max-width: 50%;
 }
 .CaseStudyHeroImage img {
-    max-width: 40rem; /* slightly wider than container */
+    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
-    height: 100%;
     /* width: 100%; */
 }
 
