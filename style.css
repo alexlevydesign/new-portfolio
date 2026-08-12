@@ -505,7 +505,7 @@ a:focus-visible {
 }
 @media only screen and (max-width: 430px) {
     .NavBarLinks a {
-        font-size: .9rem !important;
+        /* font-size: .9rem !important; */
     }
 }
 @media only screen and (max-width: 350px) {
@@ -515,7 +515,7 @@ a:focus-visible {
 }
 @media only screen and (max-width: 330px) {
     .NavBarLinks a {
-        font-size: .85rem !important;
+        /* font-size: .85rem !important; */
     }
 }
 @media only screen and (max-width: 324px) {
