@@ -1,38 +1,76 @@
-// Get name of current page by the text in the H1 tag
+// Get name of current page by the text in the title tag
 const currentPage = document.getElementsByTagName("title")[0].innerHTML;
 // console.log(currentPage);
 
 //array of UI & UX pages
-const uxPages = ["Alex Levy’s Portfolio — UI and UX", "The Newshouse Redesign", "Typeface Library Tool", "Optimal Assessment", "AI Financial Advisor", "Government Data Finder", "Coding by Design"]
+const uxPages = ["Alex Levy’s Portfolio — UI and UX", "The Newshouse Redesign", "Typeface Library Tool", "Optimal Design", "AI Financial Advisor", "Government Data Finder", "Coding by Design"]
 
 //array of graphic design pages
 const graphicDesignPages = ["Alex Levy’s Portfolio — Graphic design", "CuseHacks Branding", "Type Specimen", "Motion Reel", "Flavefull Branding", "Daily Orange Graphics", "Map Design", "Community Geography Rebrand", "Petropolis Magazine"]
 
+function highlightNavLink(href) {
+    document.querySelectorAll(`.NavBarLinks a[href="${href}"]`).forEach(link => {
+        const navItem = link.closest(".NavBarLinksChild");
+        if (navItem) {
+            navItem.classList.add("CurrentPage");
+        }
+    });
+}
+
 // Compare current page to array of all UX pages
 uxPages.forEach(page => {
-    // console.log(page);
     if (currentPage === page) {
-        // console.log("This is a UX page!")
-        // document.getElementby("NavBarLinksChild").classList.add("CurrentPage");
-        // console.log(document.getElementsByClassName("NavBarLinksChild")[1].innerHTML);
-        document.getElementsByClassName("NavBarLinksChild")[1].classList.add("CurrentPage");
+        highlightNavLink("index.html");
     }
 });
 
 // Compare current page to array of all graphic design pages
 graphicDesignPages.forEach(page => {
     if (currentPage === page) {
-        // console.log("This is a graphic design page!")
-        document.getElementsByClassName("NavBarLinksChild")[2].classList.add("CurrentPage");
+        highlightNavLink("graphic-design.html");
     }
 });
 
 
 // Highlight "About me" page in navbar
-    if (currentPage === "About me") {
-        // console.log("This is a graphic design page!")
-        document.getElementsByClassName("NavBarLinksChild")[3].classList.add("CurrentPage");
+if (currentPage === "About me") {
+    highlightNavLink("about.html");
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileNavList = document.querySelector('.MobileNav .NavBarLinks');
+  const navMenuButton = document.getElementById('nav-menu-button');
+  if (!navMenuButton || !mobileNavList) return;
+
+  let isMobileNavClosed = true;
+
+    function closeMobileNav() {
+        mobileNavList.classList.remove('open');
+        isMobileNavClosed = true;
+        navMenuButton.setAttribute('aria-expanded', 'false');
     }
+
+    function openMobileNav() {
+        mobileNavList.classList.add('open');
+        isMobileNavClosed = false;
+        navMenuButton.setAttribute('aria-expanded', 'true');
+    }
+
+    function toggleMobileNav() {
+        if (isMobileNavClosed) openMobileNav();
+        else closeMobileNav();
+    }
+
+  navMenuButton.addEventListener('click', toggleMobileNav);
+
+    // initialize closed (menu is collapsed by default in CSS)
+    closeMobileNav();
+});
+
+
+
 
 
 const projectCards = document.querySelectorAll(".ProjectCard");
