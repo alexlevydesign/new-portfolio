@@ -404,12 +404,12 @@ a:focus-visible {
         will-change: max-height, opacity;
         /* use identical timing for both properties so open/close feel symmetric */
         transition: max-height 300ms ease, opacity 400ms ease;
+        padding-top: .5rem;
     }
     /* add `.open` to expand */
     .NavBarLinks.open {
         max-height: 1000px; /* large enough to fit menu items */
         opacity: 1;
-        padding-top: .5rem;
     }
     .MenuButton {
         display: block !important;
@@ -464,7 +464,7 @@ a:focus-visible {
     .NavBar.NavBar {
         display: flex;
         flex-direction: column;
-        padding-bottom: 1rem !important;
+        padding-bottom: .5rem !important;
         /* gap: .5rem; */
     }
 
