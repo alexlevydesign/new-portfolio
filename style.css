@@ -494,7 +494,7 @@ a:focus-visible {
         font-size: 1rem;
     }
     .NavBarLinks {
-        gap: 1.2rem !important;
+        gap: .8rem !important;
     }
     .ProjectCard {
         padding: 1.5rem !important;
