@@ -98,7 +98,7 @@ main {
 #Projects {
     display: flex;
     flex-direction: column;
-    gap: .75rem;
+    gap: 1.5rem;
     /* width: clamp(30rem, 60vw, 60rem);
     align-self: center; */
 }
@@ -339,6 +339,9 @@ a:focus-visible {
 
     .GraphicDesignProjects.Wide {
         padding: 0 !important;
+    }
+    #Projects {
+        gap: .75rem;
     }
 
 }
