@@ -786,8 +786,7 @@ footer a:hover, footer a:active {
 /* #region TYPOGRAPHY */
 h1 {
     font-family: 'Lora', 'Montserrat', Verdana, sans-serif;
-    /* letter-spacing: .006em; */
-    font-size: 2.8rem;
+    /* letter-spacing: .006em; */;
     font-size: 3rem;
     font-weight: 700;
     /* width:fit-content; */
