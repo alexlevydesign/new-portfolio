@@ -109,7 +109,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
 #Projects {
@@ -801,9 +801,22 @@ h1 {
     text-align: left !important;
     text-wrap: balance;
 }
+
 .HeroHomeIntro h1 {
     line-height: 120%;
 }
+@media only screen and (min-width: 600px) {
+.HeroHome h1 {
+    font-size: 3.8rem;
+}
+}
+
+@media only screen and (max-width: 600px) {
+.HeroHome h1 {
+    font-size: 2.5rem;
+}
+}
+
 .LightH1 {
     letter-spacing: 2%;
 }
