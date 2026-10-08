@@ -807,7 +807,7 @@ h1 {
 }
 @media only screen and (min-width: 600px) {
 .HeroHome h1 {
-    font-size: 3.8rem;
+    font-size: 3.4rem;
 }
 }
 
@@ -1070,6 +1070,7 @@ a.Link:active {
 }
 .HeroMainSubHeading {
     /* text-transform: uppercase; */
+    /* font-size: clamp(1.25rem, 2vw, 2rem); */
     font-size: 1.5rem;
     font-weight: 500;
     color: #000;
@@ -1087,7 +1088,7 @@ p:has(.HeroMainSubHeading) {
 
 
 .UXDesign {
-    font-weight: 700;
+    font-weight: 500;
     color: #2156a6;
 }
 .VisualDesign {
@@ -1112,7 +1113,14 @@ p:has(.HeroMainSubHeading) {
 .HeroHomeHeading {
     display: flex;
     flex-direction: column;
-    gap: .75rem
+    gap: 1.5rem
+}
+.HeroHomeHeading h1 span {
+    display: block;
+}
+.HeroHomeHeading h1 span:last-child {
+    font-weight: 200;
+    font-family: Lora, Montserrat, sans-serif;
 }
 .HeroHalfWidth {
     max-width: 45rem;
