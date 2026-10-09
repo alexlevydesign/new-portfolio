@@ -1075,6 +1075,28 @@ a.Link:active {
     color: #4E4E4E;
     line-height: 140% !important;
 }
+
+@keyframes heroDescriptionTyping {
+    from {
+        opacity: 0;
+        transform: translateY(.2em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.HeroTypingCharacter {
+    animation: heroDescriptionTyping 180ms cubic-bezier(.22, 1, .36, 1) calc(630ms + var(--typing-delay)) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .HeroTypingCharacter {
+        animation: none;
+    }
+}
+
 p:has(.HeroMainSubHeading) {
     text-wrap: pretty;
 }
