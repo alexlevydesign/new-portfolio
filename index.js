@@ -69,6 +69,38 @@ document.addEventListener('DOMContentLoaded', () => {
     closeMobileNav();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const descriptions = document.querySelectorAll('.HeroMainSubHeading');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    descriptions.forEach(description => {
+        if (prefersReducedMotion) return;
+
+        const textNodes = [];
+        const walker = document.createTreeWalker(description, NodeFilter.SHOW_TEXT);
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        let characterIndex = 0;
+        textNodes.forEach(textNode => {
+            const fragment = document.createDocumentFragment();
+
+            [...textNode.textContent].forEach(character => {
+                const characterSpan = document.createElement('span');
+                characterSpan.className = 'HeroTypingCharacter';
+                characterSpan.textContent = character;
+                characterSpan.style.setProperty('--typing-delay', `${characterIndex * 13}ms`);
+                fragment.appendChild(characterSpan);
+                characterIndex += 1;
+            });
+
+            textNode.replaceWith(fragment);
+        });
+    });
+});
+
 
 
 
